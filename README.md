@@ -26,7 +26,7 @@ docs/
 | ПІБ | GitHub | Роль С1 |
 |---|---|---|
 | Горбонос Олександра | [@oleksandragorbonos-maker](https://github.com/oleksandragorbonos-maker) | ІТ — Інженер з тестування |
-| Тимчак Анастасія | [login] | КТ — Керівник тестування |
+| Тимчак Анастасія | [@anastasijdrepina-design](https://github.com/anastasijdrepina-design) | КТ — Керівник тестування |
 | Дрєпіна Анастасія | [login] | ТА — Тест-аналітик |
 | Коротка Ксенія | [login] | СМ — Скрам-майстер / рецензент |
 
