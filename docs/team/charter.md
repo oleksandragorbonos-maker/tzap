@@ -8,7 +8,7 @@
 |---|-----|--------------|---------|----------------|
 | 1 | Горбонос Олександра | [@oleksandragorbonos-maker](https://github.com/oleksandragorbonos-maker) | oleksandragorbonos@gmail.com | моделювання процесів, тест-дизайн |
 | 2 | Тимчак Анастасія | [login] | [email/месенджер] | [аналітика/моделювання/Java/тексти/презентації] |
-| 3 | Дрєпіна Анастасія | [login] | [email/месенджер] | [аналітика/моделювання/Java/тексти/презентації] |
+| 3 | Дрєпіна Анастасія | [@anastasijdrepina-design](https://github.com/anastasijdrepina-design) | anastasija.drepina@gmail.com | аналіз вимог, тест-дизайн, документація |
 | 4 | Коротка Ксенія | [login] | [email/месенджер] | [аналітика/моделювання/Java/тексти/презентації] |
 
 ## 1.2. Графік ротації ролей (команда з 4 осіб)
