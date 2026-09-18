@@ -26,8 +26,8 @@ docs/
 | ПІБ | GitHub | Роль С1 |
 |---|---|---|
 | Горбонос Олександра | [@oleksandragorbonos-maker](https://github.com/oleksandragorbonos-maker) | ІТ — Інженер з тестування |
-| Тимчак Анастасія | [login] | КТ — Керівник тестування |
-| Дрєпіна Анастасія | [login] | ТА — Тест-аналітик |
+| Тимчак Анастасія |[login] | КТ — Керівник тестування |
+| Дрєпіна Анастасія | [@anastasijdrepina-design](https://github.com/anastasijdrepina-design) | ТА — Тест-аналітик |
 | Коротка Ксенія | [login] | СМ — Скрам-майстер / рецензент |
 
 Ротація ролей на весь семестр — у [docs/team/charter.md](docs/team/charter.md), розд. 1.2.
