@@ -7,9 +7,9 @@
 | № | ПІБ | GitHub логін | Контакт | Сильні сторони |
 |---|-----|--------------|---------|----------------|
 | 1 | Горбонос Олександра | [@oleksandragorbonos-maker](https://github.com/oleksandragorbonos-maker) | oleksandragorbonos@gmail.com | моделювання процесів, тест-дизайн |
-| 2 | Тимчак Анастасія | [login] | [email/месенджер] | [аналітика/моделювання/Java/тексти/презентації] |
+| 2 | Тимчак Анастасія | [@tymna](https://github.com/tymna) | tymchak.anastasiia_fb43@edu.kpi.ua | організація роботи, декомпозиція задач, презентації |
 | 3 | Дрєпіна Анастасія | [@anastasijdrepina-design](https://github.com/anastasijdrepina-design) | anastasija.drepina@gmail.com | аналіз вимог, тест-дизайн, документація |
-| 4 | Коротка Ксенія | [login] | [email/месенджер] | [аналітика/моделювання/Java/тексти/презентації] |
+| 4 | Коротка Ксенія | [@kseniia602](https://github.com/kseniia602) | breaky.short@gmail.com | координація команди, рецензування, ведення документації |
 
 ## 1.2. Графік ротації ролей (команда з 4 осіб)
 
