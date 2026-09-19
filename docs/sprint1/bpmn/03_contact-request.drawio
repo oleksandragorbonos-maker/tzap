@@ -46,6 +46,12 @@
         <mxCell id="n11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=3;" value="Звернення закрито" vertex="1">
           <mxGeometry height="40" width="60" x="1430" y="210" as="geometry" />
         </mxCell>
+        <mxCell id="n12" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=12;fillColor=#fff2cc;strokeColor=#d6b656;" value="Звернення (тікет)" vertex="1">
+          <mxGeometry height="55" width="90" x="185" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontStyle=2;fontColor=#666666;" value="Нагадування надсилається лише один раз, якщо менеджер не відповів протягом 24 год" vertex="1">
+          <mxGeometry height="40" width="230" x="820" y="163" as="geometry" />
+        </mxCell>
         <mxCell id="e1" edge="1" parent="1" source="n1" style="edgeStyle=orthogonalEdgeStyle;html=1;" target="n2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -110,6 +116,12 @@
               <mxPoint x="980" y="318" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="n2" style="dashed=1;endArrow=none;html=1;" target="n12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="n13" style="dashed=1;endArrow=none;html=1;" target="n7">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

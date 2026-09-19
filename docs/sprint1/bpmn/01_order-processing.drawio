@@ -88,6 +88,9 @@
         <mxCell id="n17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="Скомплектувати замовлення" vertex="1">
           <mxGeometry height="60" width="170" x="1800" y="400" as="geometry" />
         </mxCell>
+        <mxCell id="n17marker" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontStyle=1;fontSize=14;align=center;verticalAlign=middle;" value="+" vertex="1">
+          <mxGeometry height="16" width="16" x="1877" y="444" as="geometry" />
+        </mxCell>
         <mxCell id="n18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Підтвердити замовлення покупцю" vertex="1">
           <mxGeometry height="60" width="140" x="2020" y="210" as="geometry" />
         </mxCell>
