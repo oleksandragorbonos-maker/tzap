@@ -17,11 +17,11 @@
 
 ## Перелік моделей
 
-| Файл | Процес | Типи шлюзів | Таблиця елементів |
-|---|---|---|---|
-| [01_order-processing.drawio](01_order-processing.drawio) | Оформлення замовлення | XOR (за даними), XOR (за подіями), AND | [element-tables.md](element-tables.md) §1 |
-| [02_product-return.drawio](02_product-return.drawio) | Повернення товару | XOR ×2 | [element-tables.md](element-tables.md) §2 |
-| [03_contact-request.drawio](03_contact-request.drawio) | Обробка звернення з контактної форми | XOR (за даними), XOR (за подіями) | [element-tables.md](element-tables.md) §3 |
+| Файл | Процес | Типи шлюзів | Таблиця елементів | Експорт |
+|---|---|---|---|---|
+| [01_order-processing.drawio](01_order-processing.drawio) | Оформлення замовлення | XOR (за даними), XOR (за подіями), AND | [element-tables.md](element-tables.md) §1 | [PDF](01_order-processing.pdf) |
+| [02_product-return.drawio](02_product-return.drawio) | Повернення товару | XOR ×2 | [element-tables.md](element-tables.md) §2 | [PDF](02_product-return.pdf) |
+| [03_contact-request.drawio](03_contact-request.drawio) | Обробка звернення з контактної форми | XOR (за даними), XOR (за подіями) | [element-tables.md](element-tables.md) §3 | [PDF](03_contact-request.pdf) |
 
 Норматив ≥3 різних типи шлюзів у наборі виконує вже модель 1 сама по собі: XOR за
 даними, XOR за подіями, AND. Таблиця елементів для четвертого процесу («Поповнення
@@ -31,10 +31,9 @@ Planning замінить один з обраних процесів.
 Норматив DoD: у кожній моделі — початкова й кінцева подія, доріжки, ≥1 шлюз (✅);
 у наборі ≥3 типи шлюзів (✅, модель 1), ≥1 підпроцес (✅ модель 1, «Скомплектувати
 замовлення»), потоки повідомлень між пулами (✅ усі три моделі), об'єкти даних
-(✅ моделі 1–3), анотації (✅ моделі 1 і 3).
+(✅ моделі 1–3), анотації (✅ моделі 1 і 3), експорт кожної моделі в PDF поряд
+з вихідником (✅ усі три моделі).
 
-**Наступний крок:** експорт кожної моделі в PDF/PNG (draw.io → File → Export as)
-поряд з вихідником — це єдиний пункт DoD, що ще не закритий (виконується локально
-в draw.io, автоматичного експорту в цьому середовищі немає).
+Усі пункти DoD для BPMN-моделей закриті.
 
 Протокол рецензування — у файлі [review.md](review.md).
