@@ -2,7 +2,7 @@
 
 Продукт: №1 «ШопЛайн» · Спринт: 2 (1–15 жовтня 2026) · Дата: 01.10.2026 · Автор: Горбонос Олександра (СМ)
 
-Jira-спринт: [SCRUM Sprint 2](https://breakyshort.atlassian.net/jira/software/projects/SCRUM/boards)
+Jira-спринт: [SCRUM Sprint 2]([https://breakyshort.atlassian.net/jira/software/projects/SCRUM/boards](https://breakyshort.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=type+IN+%28Task%2C+Subtask%29&groupBy=assignee&atlOrigin=eyJpIjoiZDg2ZjgwYTkyMzBlNDgxN2EyNzA0NDU5OTE5NWYzMmMiLCJwIjoiaiJ9))
 
 ## Таблиця задач
 
