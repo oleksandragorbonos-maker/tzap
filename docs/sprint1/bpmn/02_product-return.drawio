@@ -185,11 +185,9 @@
         <mxCell id="m1" edge="1" parent="1" source="n2" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#d6b656;" target="mgrReceive" value="заявка на повернення (повідомлення)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="m2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#d6b656;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="bCatchApproved" value="дозвіл на повернення (повідомлення)">
+        <mxCell id="m2" edge="1" parent="1" source="mgrApprove" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#d6b656;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="bCatchApproved" value="дозвіл на повернення (повідомлення)">
           <mxGeometry relative="1" x="0.0727" as="geometry">
             <mxPoint as="offset" />
-            <mxPoint x="890" y="217.0344827586207" as="sourcePoint" />
-            <mxPoint x="505" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="m3" edge="1" parent="1" source="nNotifyRefuse" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#d6b656;" target="bCatchRefused" value="відмова (повідомлення)">
