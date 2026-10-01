@@ -8,10 +8,6 @@ Jira-спринт: [SCRUM Sprint 2](https://breakyshort.atlassian.net/jira/softw
 
 Експорт з Jira у `task-board.xlsx` з'явиться тут 12.10 (SCRUM-51).
 
-Посилання на Google Sheets (чернетка таблиці задач, standup-записи): _додати до 12.10_.
-
-> Доступ для викладача — на читання (view-only).
-
 ## Артефакти спринта
 
 | Файл | Призначення | Задача |
