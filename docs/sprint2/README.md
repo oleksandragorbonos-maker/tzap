@@ -2,7 +2,7 @@
 
 Продукт: №1 «ШопЛайн» · Спринт: 2 «Аудит вимог і стратегія тестування» (1–15 жовтня 2026) · Дата: 13.10.2026 · Автори: Горбонос Олександра (СМ, створення, 01.10.2026), Коротка Ксенія (КТ, структура інкременту і перевірка DoD, SCRUM-60)
 
-Jira-спринт: [SCRUM Sprint 2](https://breakyshort.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=type+IN+%28Task%2C+Subtask%29&groupBy=assignee)
+Jira-спринт: [SCRUM Sprint 2](https://breakyshort.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=type+IN+%28Task%2C+Subtask%29&groupBy=assignee) · Доступ на читання для викладача: ⏳ підтверджує СМ (SCRUM-51)
 
 ## Артефакти спринта
 
@@ -15,7 +15,13 @@ Jira-спринт: [SCRUM Sprint 2](https://breakyshort.atlassian.net/jira/softw
 | `retro-sprint2.md` | Протокол ретро Start / Stop / Continue | СМ | SCRUM-62 | після ретро 15.10 |
 | `README.md` | Цей файл: перелік артефактів і перевірка DoD | КТ | SCRUM-60 | у `main` після merge |
 
-Назви файлів — латиницею без пробілів. У кожному документі вказано продукт, спринт, дату й авторів.
+## Оформлення (вимоги розд. 8 методички і SCRUM-60)
+
+| Вимога | Стан | Примітка |
+|---|---|---|
+| Назви файлів латиницею без пробілів | ✅ | усі 6 файлів |
+| У кожному документі — продукт, спринт, дата, автори | ⏳ | `test-plan.md`, `SRS-1.1.md`, `README.md` — ✅; `requirements-defects.xlsx` — повна шапка лише на аркуші «Спірні», потрібен аркуш «Про файл» (ТА, SCRUM-56); `task-board.xlsx`, `retro-sprint2.md` — перевірити після здачі |
+| Посилання на Jira і доступ на читання для викладача | ⏳ | посилання є; доступ підтверджує СМ (SCRUM-51) |
 
 ## Перевірка Definition of Done (розд. 7 методички)
 
