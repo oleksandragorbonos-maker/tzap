@@ -2,43 +2,42 @@
 
 Команда: С · Продукт: №1 «ШопЛайн» · Спринт: 3 «Тест-кейси та звіти про дефекти» (22.10–29.10.2026) · Стан на 29.10.2026 · Автор: Горбонос Олександра (КТ) · Епік: [SCRUM-99](https://breakyshort.atlassian.net/browse/SCRUM-99)
 
-> Фінальна версія за SCRUM-104: статуси експортовано з дошки Jira станом на 29.10.2026. Стовпець «Факт, год» заповнено для задач КТ; решта власниць вносить свої години в Jira.
+> Фінальна версія за SCRUM-104: статуси й «Факт, год» експортовано з дошки Jira станом на 29.10.2026, 11:10 (оновлення статусів — СМ, SCRUM-117). Порожній «Факт» — час у Jira ще не залоговано.
 
 ## 1. Задачі
 
 | № | Задача | Роль | Виконавиця | Оцінка, год | Факт, год | Дедлайн | Статус | Jira | Рецензент |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | Декомпозиція замовлення, розподіл вимог і схема TC-NNN | КТ | Горбонос Олександра | 2 | 3 | 22.10 | готово | [SCRUM-100](https://breakyshort.atlassian.net/browse/SCRUM-100) | — |
-| 2 | Власні тест-кейси TC-009–TC-014 | КТ | Горбонос Олександра | 4 | 9 | 24.10 | готово | [SCRUM-101](https://breakyshort.atlassian.net/browse/SCRUM-101) | СМ |
-| 3 | Рецензування кейсів СМ (TC-020–TC-024) за чек-листом 5.3 | КТ | Горбонос Олександра | 2 | 7 | 25.10 | готово | [SCRUM-102](https://breakyshort.atlassian.net/browse/SCRUM-102) | — |
-| 4 | Рішення щодо P1/P2 і blocked, контроль нормативу | КТ | Горбонос Олександра | 2 | 2 | 27.10 | готово | [SCRUM-103](https://breakyshort.atlassian.net/browse/SCRUM-103) | — |
-| 5 | Статистика, README.md, task-board.md і складання docs/sprint3/ | КТ | Горбонос Олександра | 4 | 3 | 28.10 | в роботі | [SCRUM-104](https://breakyshort.atlassian.net/browse/SCRUM-104) | — |
-| 6 | Демо (10 хв), фінальна перевірка DoD і здача | КТ | Горбонос Олександра | 3 |  | 29.10 | заплановано | [SCRUM-105](https://breakyshort.atlassian.net/browse/SCRUM-105) | — |
-| 7 | Перелік вимог з SRS і аркуш Coverage | ТА | Коротка Ксенія | 3 |  | 22.10 | готово | [SCRUM-106](https://breakyshort.atlassian.net/browse/SCRUM-106) | КТ |
-| 8 | Каркас test-cases.xlsx і зразок стилю (3–5 кейсів) | ТА | Коротка Ксенія | 2 |  | 22.10 | готово | [SCRUM-107](https://breakyshort.atlassian.net/browse/SCRUM-107) | — |
-| 9 | Класи еквівалентності і граничні значення (≥2 вимоги з діапазонами) | ТА | Коротка Ксенія | 2 |  | 23.10 | готово | [SCRUM-108](https://breakyshort.atlassian.net/browse/SCRUM-108) | КТ |
-| 10 | Власні тест-кейси TC-001–TC-008 | ТА | Коротка Ксенія | 5 |  | 24.10 | готово | [SCRUM-109](https://breakyshort.atlassian.net/browse/SCRUM-109) | СМ |
-| 11 | Простежуваність: оновлення Coverage і список непокритих вимог | ТА | Коротка Ксенія | 3 |  | 27.10 | готово | [SCRUM-110](https://breakyshort.atlassian.net/browse/SCRUM-110) | КТ |
-| 12 | Середовище, облікові записи і execution-log.xlsx | ІТ | Тимчак Анастасія | 2 |  | 22.10 | на рецензії | [SCRUM-111](https://breakyshort.atlassian.net/browse/SCRUM-111) | — |
-| 13 | Налаштування GitHub Issues: шаблон звіту і мітки | ІТ | Тимчак Анастасія | 2 |  | 22.10 | готово | [SCRUM-112](https://breakyshort.atlassian.net/browse/SCRUM-112) | КТ, СМ |
-| 14 | Власні тест-кейси TC-015–TC-019 і пробний прогін | ІТ | Тимчак Анастасія | 5 |  | 25.10 | в роботі | [SCRUM-113](https://breakyshort.atlassian.net/browse/SCRUM-113) | СМ |
-| 15 | Виконання кейсів на demo і ведення журналу | ІТ | Тимчак Анастасія | 6 |  | 27.10 | заплановано | [SCRUM-114](https://breakyshort.atlassian.net/browse/SCRUM-114) | — |
-| 16 | Звіти про дефекти в GitHub Issues (≥8, ≥3 рівні severity) і attachments/ | ІТ | Тимчак Анастасія | 5 |  | 27.10 | заплановано | [SCRUM-115](https://breakyshort.atlassian.net/browse/SCRUM-115) | СМ |
-| 17 | Виправлення зауважень до звітів і підготовка живого виконання для демо | ІТ | Тимчак Анастасія | 3 |  | 28.10 | заплановано | [SCRUM-116](https://breakyshort.atlassian.net/browse/SCRUM-116) | СМ |
-| 18 | Standup і стан дошки Jira | СМ | Дрєпіна Анастасія | 3 |  | 29.10 | в роботі | [SCRUM-117](https://breakyshort.atlassian.net/browse/SCRUM-117) | — |
-| 19 | Аркуш Review і рецензування кейсів TC-001–TC-019 за чек-листом 5.3 | СМ | Дрєпіна Анастасія | 6 |  | 25.10 | готово | [SCRUM-118](https://breakyshort.atlassian.net/browse/SCRUM-118) | — |
-| 20 | Власні тест-кейси TC-020–TC-024 | СМ | Дрєпіна Анастасія | 3 |  | 24.10 | готово | [SCRUM-119](https://breakyshort.atlassian.net/browse/SCRUM-119) | КТ |
-| 21 | Рецензування звітів про дефекти (7 правил + DoD) | СМ | Дрєпіна Анастасія | 3 |  | 28.10 | готово | [SCRUM-120](https://breakyshort.atlassian.net/browse/SCRUM-120) | — |
-| 22 | Підготовка до бліцу: репетиція 12 питань | СМ | Дрєпіна Анастасія | 1 |  | 28.10 | в роботі | [SCRUM-121](https://breakyshort.atlassian.net/browse/SCRUM-121) | — |
-| 23 | Ретроспектива Start/Stop/Continue, retro.md і peer-review | СМ | Дрєпіна Анастасія | 2 |  | 29.10 | заплановано | [SCRUM-122](https://breakyshort.atlassian.net/browse/SCRUM-122) | — |
+| 2 | Власні тест-кейси TC-009–TC-014 | КТ | Горбонос Олександра | 4 | 6 | 24.10 | готово | [SCRUM-101](https://breakyshort.atlassian.net/browse/SCRUM-101) | СМ |
+| 3 | Рецензування кейсів СМ (TC-020–TC-024) за чек-листом 5.3 | КТ | Горбонос Олександра | 2 | 4 | 25.10 | готово | [SCRUM-102](https://breakyshort.atlassian.net/browse/SCRUM-102) | — |
+| 4 | Рішення щодо P1/P2 і blocked, контроль нормативу | КТ | Горбонос Олександра | 2 | 1 | 27.10 | готово | [SCRUM-103](https://breakyshort.atlassian.net/browse/SCRUM-103) | — |
+| 5 | Статистика, README.md, task-board.md і складання docs/sprint3/ | КТ | Горбонос Олександра | 4 | 3 | 28.10 | готово | [SCRUM-104](https://breakyshort.atlassian.net/browse/SCRUM-104) | — |
+| 6 | Демо (10 хв), фінальна перевірка DoD і здача | КТ | Горбонос Олександра | 3 | 1 | 29.10 | готово | [SCRUM-105](https://breakyshort.atlassian.net/browse/SCRUM-105) | — |
+| 7 | Перелік вимог з SRS і аркуш Coverage | ТА | Коротка Ксенія | 3 | 3 | 22.10 | готово | [SCRUM-106](https://breakyshort.atlassian.net/browse/SCRUM-106) | КТ |
+| 8 | Каркас test-cases.xlsx і зразок стилю (3–5 кейсів) | ТА | Коротка Ксенія | 2 | 2 | 22.10 | готово | [SCRUM-107](https://breakyshort.atlassian.net/browse/SCRUM-107) | — |
+| 9 | Класи еквівалентності і граничні значення (≥2 вимоги з діапазонами) | ТА | Коротка Ксенія | 2 | 2 | 23.10 | готово | [SCRUM-108](https://breakyshort.atlassian.net/browse/SCRUM-108) | КТ |
+| 10 | Власні тест-кейси TC-001–TC-008 | ТА | Коротка Ксенія | 5 | 5 | 24.10 | готово | [SCRUM-109](https://breakyshort.atlassian.net/browse/SCRUM-109) | СМ |
+| 11 | Простежуваність: оновлення Coverage і список непокритих вимог | ТА | Коротка Ксенія | 3 | 3 | 27.10 | готово | [SCRUM-110](https://breakyshort.atlassian.net/browse/SCRUM-110) | КТ |
+| 12 | Середовище, облікові записи і execution-log.xlsx | ІТ | Тимчак Анастасія | 2 | 2 | 22.10 | готово | [SCRUM-111](https://breakyshort.atlassian.net/browse/SCRUM-111) | — |
+| 13 | Налаштування GitHub Issues: шаблон звіту і мітки | ІТ | Тимчак Анастасія | 2 | 2 | 22.10 | готово | [SCRUM-112](https://breakyshort.atlassian.net/browse/SCRUM-112) | КТ, СМ |
+| 14 | Власні тест-кейси TC-015–TC-019 і пробний прогін | ІТ | Тимчак Анастасія | 5 | 5 | 25.10 | готово | [SCRUM-113](https://breakyshort.atlassian.net/browse/SCRUM-113) | СМ |
+| 15 | Виконання кейсів на demo і ведення журналу | ІТ | Тимчак Анастасія | 6 | 6 | 27.10 | готово | [SCRUM-114](https://breakyshort.atlassian.net/browse/SCRUM-114) | — |
+| 16 | Звіти про дефекти в GitHub Issues (≥8, ≥3 рівні severity) і attachments/ | ІТ | Тимчак Анастасія | 5 | 5 | 27.10 | готово | [SCRUM-115](https://breakyshort.atlassian.net/browse/SCRUM-115) | СМ |
+| 17 | Виправлення зауважень до звітів і підготовка живого виконання для демо | ІТ | Тимчак Анастасія | 3 | 3 | 28.10 | готово | [SCRUM-116](https://breakyshort.atlassian.net/browse/SCRUM-116) | СМ |
+| 18 | Standup і стан дошки Jira | СМ | Дрєпіна Анастасія | 3 | 3 | 29.10 | готово | [SCRUM-117](https://breakyshort.atlassian.net/browse/SCRUM-117) | — |
+| 19 | Аркуш Review і рецензування кейсів TC-001–TC-019 за чек-листом 5.3 | СМ | Дрєпіна Анастасія | 6 | 5 | 25.10 | готово | [SCRUM-118](https://breakyshort.atlassian.net/browse/SCRUM-118) | — |
+| 20 | Власні тест-кейси TC-020–TC-024 | СМ | Дрєпіна Анастасія | 3 | 2 | 24.10 | готово | [SCRUM-119](https://breakyshort.atlassian.net/browse/SCRUM-119) | КТ |
+| 21 | Рецензування звітів про дефекти (7 правил + DoD) | СМ | Дрєпіна Анастасія | 3 | 2 | 28.10 | готово | [SCRUM-120](https://breakyshort.atlassian.net/browse/SCRUM-120) | — |
+| 22 | Підготовка до бліцу: репетиція 12 питань | СМ | Дрєпіна Анастасія | 1 |  | 28.10 | готово | [SCRUM-121](https://breakyshort.atlassian.net/browse/SCRUM-121) | — |
+| 23 | Ретроспектива Start/Stop/Continue, retro.md і peer-review | СМ | Дрєпіна Анастасія | 2 |  | 29.10 | готово | [SCRUM-122](https://breakyshort.atlassian.net/browse/SCRUM-122) | — |
 | 24 | Підготуватись до бліцу (КТ): статистика і покриття | КТ | Горбонос Олександра | 1 |  | 28.10 | готово | [SCRUM-123](https://breakyshort.atlassian.net/browse/SCRUM-123) | — |
-| 25 | Підготуватись до бліцу (ТА): класи еквівалентності і граничні значення | ТА | Коротка Ксенія | 1 |  | 28.10 | готово | [SCRUM-124](https://breakyshort.atlassian.net/browse/SCRUM-124) | — |
-| 26 | Підготуватись до бліцу (ІТ): журнал і два звіти про дефекти | ІТ | Тимчак Анастасія | 1 |  | 28.10 | заплановано | [SCRUM-125](https://breakyshort.atlassian.net/browse/SCRUM-125) | — |
-| 27 | Підготуватись до бліцу (СМ): аркуш Review і життєвий цикл дефекту | СМ | Дрєпіна Анастасія | 1 |  | 28.10 | готово | [SCRUM-126](https://breakyshort.atlassian.net/browse/SCRUM-126) | — |
+| 25 | Підготуватись до бліцу (ТА): класи еквівалентності і граничні значення | ТА | Коротка Ксенія | 1 | 1 | 28.10 | готово | [SCRUM-124](https://breakyshort.atlassian.net/browse/SCRUM-124) | — |
+| 26 | Підготуватись до бліцу (ІТ): журнал і два звіти про дефекти | ІТ | Тимчак Анастасія | 1 | 1 | 28.10 | готово | [SCRUM-125](https://breakyshort.atlassian.net/browse/SCRUM-125) | — |
+| 27 | Підготуватись до бліцу (СМ): аркуш Review і життєвий цикл дефекту | СМ | Дрєпіна Анастасія | 1 | 1 | 28.10 | готово | [SCRUM-126](https://breakyshort.atlassian.net/browse/SCRUM-126) | — |
 
 Статуси: заплановано → в роботі → на рецензії → готово (або перенесено — куди і чому). Відповідність Jira: To Do, Idea — заплановано; In Progress — в роботі; Testing — на рецензії; Done — готово.
 
-Примітка: статуси SCRUM-113, 114, 115, 116 у Jira не відображають стан роботи в репозиторії (журнал виконання повний, 16 звітів про дефекти створено, зауваження до кейсів виправлено). Статуси оновлює їх власниця.
 
 ## 2. Схема ідентифікаторів тест-кейсів
 
