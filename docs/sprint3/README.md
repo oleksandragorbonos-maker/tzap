@@ -64,8 +64,8 @@
 | Priority | Кількість |
 |---|---|
 | P1 | 0 |
-| P2 | 1 |
-| P3 | 15 |
+| P2 | 0 |
+| P3 | 16 |
 
 | Bug ID | Заголовок | Severity | Priority | Кейс |
 |---|---|---|---|---|
@@ -81,7 +81,7 @@
 | [#59](https://github.com/oleksandragorbonos-maker/tzap/issues/59) | Безпека: сервер не перенаправляє http:// на https:// — відповідь 200 без Location і без HSTS (S-10) | major | P3 | TC-036 |
 | [#63](https://github.com/oleksandragorbonos-maker/tzap/issues/63) | Головна сторінка за ширини 375 px: кнопка меню (☰) 56×40 менша за 44×44 px (U-30) | minor | P3 | TC-034 |
 | [#64](https://github.com/oleksandragorbonos-maker/tzap/issues/64) | Реєстрація: для пароля з 7 символів повідомлення «Password must be minimal 6 characters long.» замість мінімуму 8 (F-10) | minor | P3 | TC-006 |
-| [#65](https://github.com/oleksandragorbonos-maker/tzap/issues/65) | Вхід: щойно зареєстрований покупець із паролем із 8 символів не може увійти — «Invalid email or password» (F-10, F-20) | major | P2 | TC-007 |
+| [#65](https://github.com/oleksandragorbonos-maker/tzap/issues/65) | Вхід: щойно зареєстрований покупець із паролем із 8 символів не може увійти — «Invalid email or password» (F-10, F-20) | major | P3 | TC-007 |
 | [#66](https://github.com/oleksandragorbonos-maker/tzap/issues/66) | Головна сторінка за ширини 375 px: кнопка «Search» 77×38 менша за 44×44 px (U-30) | minor | P3 | TC-034 |
 | [#67](https://github.com/oleksandragorbonos-maker/tzap/issues/67) | Особистий кабінет: у списку «My invoices» немає колонки статусу замовлення (F-130) | minor | P3 | TC-031 |
 | [#68](https://github.com/oleksandragorbonos-maker/tzap/issues/68) | Відновлення пароля: після «Set New Password» показано ключ «page.forgot-password.confirm» замість повідомлення про лист (F-30) | minor | P3 | TC-019 |
