@@ -36,17 +36,31 @@
 
 ## 2. Розподіл BL-вимог
 
-> Заповнюється на занятті 1 (Sprint Planning, КТ).
+> Заповнено на Sprint Planning (КТ). Кожна вимога має рівно одну власницю; власниця пише тести на свою вимогу, але юніт-тести пишуть усі (≥3 на особу за комітами).
 
-| Власниця | BL-вимоги | Клас |
-|---|---|---|
-| КТ | TBD | TBD |
-| ТА | TBD | TBD |
-| ІТ | TBD | TBD |
-| СМ | TBD | TBD |
+| Власниця | Роль | BL-вимоги | Клас модуля | Орієнтовно тестів |
+|---|---|---|---|---|
+| Дрєпіна Анастасія | КТ | BL-20, BL-60 | `Cart.addItem` (повторне додавання), `DiscountCalculator.shippingFee` | ~8 |
+| Горбонос Олександра | ТА | BL-50, BL-70 | `DiscountCalculator.volumeDiscount*`, `PromoCodeValidator.validate` | ~14 |
+| Коротка Ксенія | ІТ | BL-10, BL-40 | `Cart.addItem` (валідація), `removeItem`, `changeQty`, `subtotal`, `itemCount` | ~12 |
+| Тимчак Анастасія | СМ | BL-80 | `PromoCodeValidator.apply` | ~5 |
+
+Принцип розподілу: ТА бере вимоги з найбільшою кількістю меж і класів еквівалентності (її задача №8); КТ, на якій найбільше координаційної роботи, — найлегші вимоги; СМ — одна вимога.
 
 Вимоги для тестування: BL-10, BL-20, BL-40, BL-50, BL-60, BL-70, BL-80 (BL-30 вилучена в SRS 1.1).
 Модуль: `ua.kpi.tzyapz.shopline` (Cart, DiscountCalculator, PromoCodeValidator).
+
+### Схема назв тест-методів
+
+- Метод: `given<Умова>_when<Дія>_<Очікування>`, наприклад `givenSubtotalExactly5000_whenVolumeDiscountPercent_returns10`, `givenQtyAbove99_whenAddItem_throwsIllegalArgument`.
+- `@DisplayName` починається з ID вимоги: `"BL-50: 5000.00 → знижка 10 %"`.
+- Клас: `<КласМодуля>Test` (`CartTest`, `DiscountCalculatorTest`, `PromoCodeValidatorTest`); UI-тести — у підпакеті `ui` з `@Tag("ui")`.
+- Структура тесту: arrange — act — assert; очікуване значення береться з SRS 1.1, а не з коду; для меж — `@ParameterizedTest` (значення з обох боків межі).
+- Кілька власниць працюють в одному класі (`CartTest`, `DiscountCalculatorTest`, `PromoCodeValidatorTest`): окремі гілки на авторку, малі pull request, щоб уникнути конфліктів злиття.
+
+### Нормативи для команди з 4 осіб
+
+Юніт-тестів ≥16 · UI-сценаріїв WebDriver ≥6 · дефектів модуля ≥4 · ≥3 юніт-тести на кожну за комітами · 1–2 сценарії Selenium IDE.
 
 ## 3. Definition of Done
 
