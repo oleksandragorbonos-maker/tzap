@@ -34,6 +34,7 @@ class CartTest {
         assertEquals(qty, cart.qtyOf("HAM-010"));
     }
 
+    // Дефект #72: значення 100 приймається (MAX_QTY = 100 замість 99)
     @ParameterizedTest(name = "qty = {0}")
     @ValueSource(ints = {0, -1, 100, 101})
     @DisplayName("BL-10: кількість поза межами 1..99 відхиляється")
@@ -50,6 +51,7 @@ class CartTest {
                 () -> cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal(price), 1));
     }
 
+    // Дефект #73: ціна перевіряється до округлення, 0.004 зберігається як 0.00
     @ParameterizedTest(name = "ціна = {0}")
     @ValueSource(strings = {"0.004", "0.001"})
     @DisplayName("BL-10: ціна, що після округлення HALF_UP дорівнює 0.00, відхиляється")
@@ -66,6 +68,7 @@ class CartTest {
                 () -> cart.addItem(sku, "Молоток слюсарний", new BigDecimal("350.00"), 1));
     }
 
+    // Дефект #74: name не перевіряється, порожнє значення приймається
     @ParameterizedTest(name = "name = \"{0}\"")
     @EmptySource
     @DisplayName("BL-10: порожній name відхиляється")
@@ -135,6 +138,7 @@ class CartTest {
         assertEquals(qty, cart.qtyOf("HAM-010"));
     }
 
+    // Дефект #72: значення 100 приймається (MAX_QTY = 100 замість 99)
     @ParameterizedTest(name = "нова кількість = {0}")
     @ValueSource(ints = {0, -1, 100, 101})
     @DisplayName("BL-40: changeQty поза межами 1..99 відхиляється")
