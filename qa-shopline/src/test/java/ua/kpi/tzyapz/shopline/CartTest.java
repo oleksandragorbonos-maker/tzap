@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.EmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.math.BigDecimal;
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -94,5 +95,80 @@ class CartTest {
         cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal(price), 1);
 
         assertEquals(new BigDecimal(expected), cart.subtotal());
+    }
+
+    @Test
+    @DisplayName("BL-40: removeItem видаляє рядок, решта кошика лишається")
+    void givenExistingItem_whenRemoveItem_itemIsRemoved() {
+        cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal("350.00"), 2);
+        cart.addItem("PLR-020", "Плоскогубці комбіновані", new BigDecimal("199.99"), 1);
+
+        cart.removeItem("HAM-010");
+
+        assertAll(
+                () -> assertThrows(NoSuchElementException.class, () -> cart.qtyOf("HAM-010")),
+                () -> assertEquals(1, cart.itemCount()),
+                () -> assertEquals(new BigDecimal("199.99"), cart.subtotal())
+        );
+    }
+
+    @Test
+    @DisplayName("BL-40: removeItem для відсутнього sku кидає NoSuchElementException")
+    void givenAbsentSku_whenRemoveItem_throwsNoSuchElement() {
+        assertThrows(NoSuchElementException.class, () -> cart.removeItem("XXX-000"));
+    }
+
+    @Test
+    @DisplayName("BL-40: changeQty для відсутнього sku кидає NoSuchElementException")
+    void givenAbsentSku_whenChangeQty_throwsNoSuchElement() {
+        assertThrows(NoSuchElementException.class, () -> cart.changeQty("XXX-000", 5));
+    }
+
+    @ParameterizedTest(name = "нова кількість = {0}")
+    @ValueSource(ints = {1, 2, 98, 99})
+    @DisplayName("BL-40: changeQty встановлює кількість від 1 до 99")
+    void givenQtyWithinRange_whenChangeQty_qtyIsUpdated(int qty) {
+        cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal("350.00"), 5);
+
+        cart.changeQty("HAM-010", qty);
+
+        assertEquals(qty, cart.qtyOf("HAM-010"));
+    }
+
+    @ParameterizedTest(name = "нова кількість = {0}")
+    @ValueSource(ints = {0, -1, 100, 101})
+    @DisplayName("BL-40: changeQty поза межами 1..99 відхиляється")
+    void givenQtyOutOfRange_whenChangeQty_throwsIllegalArgument(int qty) {
+        cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal("350.00"), 5);
+
+        assertThrows(IllegalArgumentException.class, () -> cart.changeQty("HAM-010", qty));
+    }
+
+    @Test
+    @DisplayName("BL-40: subtotal — сума «ціна × кількість» за всіма рядками")
+    void givenTwoItems_whenSubtotal_returnsSumOfLineTotals() {
+        cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal("120.50"), 3);
+        cart.addItem("PLR-020", "Плоскогубці комбіновані", new BigDecimal("49.99"), 2);
+
+        assertEquals(new BigDecimal("461.48"), cart.subtotal());
+    }
+
+    @Test
+    @DisplayName("BL-40: порожній кошик — subtotal 0.00 і itemCount 0")
+    void givenEmptyCart_whenSubtotalAndItemCount_returnZero() {
+        assertAll(
+                () -> assertEquals(new BigDecimal("0.00"), cart.subtotal()),
+                () -> assertEquals(0, cart.itemCount())
+        );
+    }
+
+    @Test
+    @DisplayName("BL-40: itemCount — сума кількостей усіх рядків")
+    void givenSeveralItems_whenItemCount_returnsSumOfQuantities() {
+        cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal("350.00"), 3);
+        cart.addItem("PLR-020", "Плоскогубці комбіновані", new BigDecimal("199.99"), 2);
+        cart.addItem("SCR-030", "Викрутка хрестова", new BigDecimal("89.90"), 10);
+
+        assertEquals(15, cart.itemCount());
     }
 }
