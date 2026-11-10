@@ -60,7 +60,7 @@ class PromoCodeValidatorTest {
                 () -> validator.apply(promo, TODAY, new BigDecimal("1000.00")));
     }
 
-    // Дефект #78: validate використовує today.isBefore(expiresOn) (ексклюзивна межа),
+    // Дефект #80: validate використовує today.isBefore(expiresOn) (ексклюзивна межа),
     // тому промокод з expiresOn == today відхиляється, а SRS вимагає «день закінчення включно»
     @Test
     @DisplayName("BL-80: промокод діє до today включно — apply повертає знижку")
@@ -71,7 +71,7 @@ class PromoCodeValidatorTest {
         assertEquals(new BigDecimal("100.00"), result);
     }
 
-    // Дефект #79: validate і apply не перевіряють singleUse && used,
+    // Дефект #81: validate і apply не перевіряють singleUse && used,
     // тому використаний одноразовий промокод не відхиляється (порушення BL-80)
     @Test
     @DisplayName("BL-80: використаний одноразовий промокод — apply кидає IllegalArgumentException")
