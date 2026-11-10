@@ -92,7 +92,7 @@ class CartTest {
     }
 
     @ParameterizedTest(name = "ціна {0} → {1}")
-    @CsvSource({"10.004, 10.00", "10.005, 10.01", "19.994, 19.99", "19.995, 20.00"})
+    @CsvSource({"0.005, 0.01", "10.004, 10.00", "10.005, 10.01", "19.994, 19.99", "19.995, 20.00"})
     @DisplayName("BL-10: ціна зберігається з округленням до копійок за HALF_UP")
     void givenPriceWithThreeDecimals_whenAddItem_priceIsRoundedHalfUp(String price, String expected) {
         cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal(price), 1);
@@ -146,6 +146,20 @@ class CartTest {
         cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal("350.00"), 5);
 
         assertThrows(IllegalArgumentException.class, () -> cart.changeQty("HAM-010", qty));
+    }
+
+    @Test
+    @DisplayName("BL-40: changeQty змінює subtotal і itemCount")
+    void givenChangedQty_whenSubtotalAndItemCount_reflectNewQty() {
+        cart.addItem("HAM-010", "Молоток слюсарний", new BigDecimal("350.00"), 2);
+        cart.addItem("PLR-020", "Плоскогубці комбіновані", new BigDecimal("199.99"), 1);
+
+        cart.changeQty("HAM-010", 3);
+
+        assertAll(
+                () -> assertEquals(4, cart.itemCount()),
+                () -> assertEquals(new BigDecimal("1249.99"), cart.subtotal())
+        );
     }
 
     @Test
