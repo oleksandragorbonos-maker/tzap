@@ -22,8 +22,8 @@
 | 12 | Власні юніт-тести для призначених BL-вимог (JUnit 5) | ІТ | Коротка Ксенія | 5 | | 08.11 | заплановано | [SCRUM-139](https://breakyshort.atlassian.net/browse/SCRUM-139) | СМ |
 | 13 | UI-тест Selenium WebDriver для practicesoftwaretesting.com | ІТ | Коротка Ксенія | 4 | | 09.11 | заплановано | [SCRUM-140](https://breakyshort.atlassian.net/browse/SCRUM-140) | КТ |
 | 14 | Протокол запуску: surefire-reports і знімки UI-тесту | ІТ | Коротка Ксенія | 2 | | 10.11 | заплановано | [SCRUM-141](https://breakyshort.atlassian.net/browse/SCRUM-141) | — |
-| 15 | Таблиця задач спринта 4, standup і стан дошки Jira | СМ | Тимчак Анастасія | 3 | | 12.11 | заплановано | [SCRUM-142](https://breakyshort.atlassian.net/browse/SCRUM-142) | — |
-| 16 | Власні юніт-тести для призначених BL-вимог (JUnit 5) | СМ | Тимчак Анастасія | 4 | | 09.11 | заплановано | [SCRUM-143](https://breakyshort.atlassian.net/browse/SCRUM-143) | КТ |
+| 15 | Таблиця задач спринта 4, standup і стан дошки Jira | СМ | Тимчак Анастасія | 3 | | 12.11 | в роботі | [SCRUM-142](https://breakyshort.atlassian.net/browse/SCRUM-142) | — |
+| 16 | Власні юніт-тести для призначених BL-вимог (JUnit 5) | СМ | Тимчак Анастасія | 4 | 4 | 09.11 | на рецензії | [SCRUM-143](https://breakyshort.atlassian.net/browse/SCRUM-143) | КТ |
 | 17 | Аркуш Review і рецензування юніт-тестів команди за чек-листом 5.4 | СМ | Тимчак Анастасія | 5 | | 10.11 | заплановано | [SCRUM-144](https://breakyshort.atlassian.net/browse/SCRUM-144) | — |
 | 18 | Підготовка до бліцу: репетиція 12 питань про автоматизацію | СМ | Тимчак Анастасія | 1 | | 11.11 | заплановано | [SCRUM-145](https://breakyshort.atlassian.net/browse/SCRUM-145) | — |
 | 19 | Ретроспектива Start/Stop/Continue, retro.md і peer-review | СМ | Тимчак Анастасія | 2 | | 12.11 | заплановано | [SCRUM-146](https://breakyshort.atlassian.net/browse/SCRUM-146) | — |
