@@ -25,8 +25,7 @@ class VolumeDiscountTest {
         calc = new DiscountCalculator();
     }
 
-    // Кандидат у дефекти D-3: поріг 5000.00 дає 5 % замість 10 % (у коді «> 5000» замість «≥ 5000»).
-    // Номер звіту — після заведення Issue (мітка module).
+    // Дефект #87: поріг 5000.00 дає 5 % замість 10 % (у коді «> 5000» замість «≥ 5000»).
     @ParameterizedTest(name = "підсумок {0} → {1} %")
     @CsvSource({
             "0.00, 0",
@@ -50,7 +49,7 @@ class VolumeDiscountTest {
         assertEquals(expectedPercent, percent);
     }
 
-    // Кандидати у дефекти D-3 (поріг 5000.00) і D-4 (округлення DOWN замість HALF_UP: 4999.99 → 249.99).
+    // Дефекти #87 (поріг 5000.00) і #88 (округлення DOWN замість HALF_UP: 4999.99 → 249.99).
     @ParameterizedTest(name = "підсумок {0} → знижка {1}")
     @CsvSource({
             "0.00, 0.00",
@@ -74,7 +73,7 @@ class VolumeDiscountTest {
         assertEquals(new BigDecimal(expectedDiscount), discount);
     }
 
-    // Кандидат у дефекти D-4: у коді RoundingMode.DOWN замість HALF_UP.
+    // Дефект #88: у коді RoundingMode.DOWN замість HALF_UP.
     // 2333.33 × 5 % = 116.6665 → 116.67; 2000.10 × 5 % = 100.005 (рівно «половина») → 100.01.
     @ParameterizedTest(name = "підсумок {0} → знижка {1}")
     @CsvSource({
