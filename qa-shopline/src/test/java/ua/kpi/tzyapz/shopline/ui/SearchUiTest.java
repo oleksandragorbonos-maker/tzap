@@ -49,8 +49,10 @@ class SearchUiTest {
     @DisplayName("TC-022: після пошуку «Hammer» натискання «X» скидає результати")
     void givenSearchQuery_whenResetSearch_moreProductsAppear() {
         driver.get(BASE_URL);
-        WebElement searchField = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-test='search-query']")));
+        String firstNameBefore = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-test='product-name']"))).getText();
+
+        WebElement searchField = driver.findElement(By.cssSelector("[data-test='search-query']"));
         searchField.sendKeys("Hammer");
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.cssSelector("[data-test='search-submit']"))).click();
@@ -73,7 +75,9 @@ class SearchUiTest {
         assertAll(
                 () -> assertFalse(allNames.isEmpty(), "Список після очищення порожній"),
                 () -> assertTrue(allNames.size() > hammerCount,
-                        "Після очищення не більше товарів ніж при пошуку «Hammer»")
+                        "Після очищення не більше товарів ніж при пошуку «Hammer»"),
+                () -> assertTrue(allNames.contains(firstNameBefore),
+                        "Перша картка «" + firstNameBefore + "» відсутня після очищення пошуку")
         );
     }
 

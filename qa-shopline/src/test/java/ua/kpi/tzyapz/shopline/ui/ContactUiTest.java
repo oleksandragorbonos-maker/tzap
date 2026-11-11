@@ -61,5 +61,7 @@ class ContactUiTest {
                 By.cssSelector("[data-test='message-error']")));
         assertTrue(error.getText().contains("minimal 50 characters"),
                 "Очікувалося 'minimal 50 characters', отримано: " + error.getText());
+        assertTrue(driver.findElements(By.cssSelector(".alert-success")).isEmpty(),
+                "Форма надіслала повідомлення попри 49 символів");
     }
 }

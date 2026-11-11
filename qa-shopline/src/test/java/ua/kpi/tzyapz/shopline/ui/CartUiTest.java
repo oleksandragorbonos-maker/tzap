@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -65,6 +67,11 @@ class CartUiTest {
         driver.get(BASE_URL);
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.cssSelector("[data-test^='product-01']"))).click();
+
+        String unitPriceText = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("[data-test='unit-price']"))).getText();
+        BigDecimal unitPrice = new BigDecimal(unitPriceText.replace("$", "").trim());
+
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.cssSelector("[data-test='add-to-cart']"))).click();
         wait.until(d -> {
@@ -85,6 +92,9 @@ class CartUiTest {
                 !d.findElement(By.cssSelector("[data-test='cart-total']")).getText().equals(initialTotal));
 
         String newTotal = driver.findElement(By.cssSelector("[data-test='cart-total']")).getText();
+        BigDecimal expectedTotal = unitPrice.multiply(new BigDecimal("2")).setScale(2, RoundingMode.HALF_UP);
+        String expectedTotalText = "$" + expectedTotal.toPlainString();
         assertNotEquals(initialTotal, newTotal, "Total не змінився після зміни кількості на 2");
+        assertEquals(expectedTotalText, newTotal, "Total не відповідає одиничній ціні × 2");
     }
 }
