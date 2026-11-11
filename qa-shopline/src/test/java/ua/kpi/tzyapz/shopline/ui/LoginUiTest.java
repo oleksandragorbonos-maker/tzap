@@ -18,7 +18,7 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("ui")
-@DisplayName("TC-016: вхід до облікового запису")
+@DisplayName("TC-004: вхід до облікового запису")
 class LoginUiTest {
 
     private static final String BASE_URL = "https://practicesoftwaretesting.com/";
@@ -42,13 +42,13 @@ class LoginUiTest {
     }
 
     @Test
-    @DisplayName("TC-016: введення неправильного пароля показує повідомлення про помилку")
-    void givenWrongPassword_whenLogin_errorMessageIsShown() {
+    @DisplayName("TC-004: зареєстрована адреса з неправильним паролем показує повідомлення про помилку")
+    void givenRegisteredEmailWrongPassword_whenLogin_errorMessageIsShown() {
         driver.get(BASE_URL + "auth/login");
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("[data-test='email']"))).sendKeys("wrong@example.com");
-        driver.findElement(By.cssSelector("[data-test='password']")).sendKeys("wrongpassword");
+                By.cssSelector("[data-test='email']"))).sendKeys("shopline.ta.test@example.com");
+        driver.findElement(By.cssSelector("[data-test='password']")).sendKeys("Test-pass1");
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.cssSelector("[data-test='login-submit']"))).click();
 
