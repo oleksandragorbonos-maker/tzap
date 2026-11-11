@@ -46,6 +46,38 @@ class SearchUiTest {
     }
 
     @Test
+    @DisplayName("TC-022: після пошуку «Hammer» натискання «X» скидає результати")
+    void givenSearchQuery_whenResetSearch_moreProductsAppear() {
+        driver.get(BASE_URL);
+        WebElement searchField = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-test='search-query']")));
+        searchField.sendKeys("Hammer");
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.cssSelector("[data-test='search-submit']"))).click();
+
+        wait.withMessage("Результати пошуку «Hammer» не завантажились").until(d -> {
+            List<WebElement> names = d.findElements(By.cssSelector("[data-test='product-name']"));
+            return !names.isEmpty()
+                    && names.stream().allMatch(n -> n.getText().toLowerCase().contains("hammer"));
+        });
+        int hammerCount = driver.findElements(By.cssSelector("[data-test='product-name']")).size();
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.cssSelector("[data-test='search-reset']"))).click();
+
+        wait.withMessage("Після очищення список не збільшився").until(d ->
+                d.findElements(By.cssSelector("[data-test='product-name']")).size() > hammerCount);
+
+        List<String> allNames = driver.findElements(By.cssSelector("[data-test='product-name']"))
+                .stream().map(WebElement::getText).toList();
+        assertAll(
+                () -> assertFalse(allNames.isEmpty(), "Список після очищення порожній"),
+                () -> assertTrue(allNames.size() > hammerCount,
+                        "Після очищення не більше товарів ніж при пошуку «Hammer»")
+        );
+    }
+
+    @Test
     @DisplayName("TC-001: запит «pliers» у нижньому регістрі повертає лише товари зі словом Pliers у назві")
     void givenLowercaseQuery_whenSearch_allProductNamesContainQuery() {
         driver.get(BASE_URL);
