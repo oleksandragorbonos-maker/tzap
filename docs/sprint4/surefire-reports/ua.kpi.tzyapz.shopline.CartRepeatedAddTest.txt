@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: ua.kpi.tzyapz.shopline.CartRepeatedAddTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0.354 s <<< FAILURE! -- in ua.kpi.tzyapz.shopline.CartRepeatedAddTest
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalAbove99_whenAddItemTwice_throwsIllegalArgumentAndCartUnchanged(int, int)[1] -- Time elapsed: 0.064 s <<< FAILURE!
+Tests run: 10, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0.111 s <<< FAILURE! -- in ua.kpi.tzyapz.shopline.CartRepeatedAddTest
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalAbove99_whenAddItemTwice_throwsIllegalArgumentAndCartUnchanged(int, int)[1] -- Time elapsed: 0.019 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -42,7 +42,7 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalAbove99_whenAddItemTwice_throwsIllegalArgumentAndCartUnchanged(int, int)[2] -- Time elapsed: 0.007 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalAbove99_whenAddItemTwice_throwsIllegalArgumentAndCartUnchanged(int, int)[2] -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -82,7 +82,7 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalAbove99_whenAddItemTwice_throwsIllegalArgumentAndCartUnchanged(int, int)[3] -- Time elapsed: 0.007 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalAbove99_whenAddItemTwice_throwsIllegalArgumentAndCartUnchanged(int, int)[3] -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -122,7 +122,7 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalAbove99_whenAddItemTwice_throwsIllegalArgumentAndCartUnchanged(int, int)[4] -- Time elapsed: 0.002 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalAbove99_whenAddItemTwice_throwsIllegalArgumentAndCartUnchanged(int, int)[4] -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -162,7 +162,7 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenSameSku_whenAddItemTwice_quantityIsSummedInSingleLine -- Time elapsed: 0.011 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenSameSku_whenAddItemTwice_quantityIsSummedInSingleLine -- Time elapsed: 0.004 s <<< FAILURE!
 org.opentest4j.MultipleFailuresError: 
 Multiple Failures (3 failures)
 	org.opentest4j.AssertionFailedError: кількість у рядку ==> expected: <5> but was: <3>
@@ -228,7 +228,7 @@ Multiple Failures (3 failures)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 7 more
 
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalUpTo99_whenAddItemTwice_quantitiesAreSummed(int, int, int)[1] -- Time elapsed: 0.005 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalUpTo99_whenAddItemTwice_quantitiesAreSummed(int, int, int)[1] -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -270,7 +270,7 @@ org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalUpTo99_whenAddItemTwice_quantitiesAreSummed(int, int, int)[2] -- Time elapsed: 0 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalUpTo99_whenAddItemTwice_quantitiesAreSummed(int, int, int)[2] -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <99> but was: <49>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -312,7 +312,7 @@ org.opentest4j.AssertionFailedError: expected: <99> but was: <49>
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalUpTo99_whenAddItemTwice_quantitiesAreSummed(int, int, int)[3] -- Time elapsed: 0.011 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalUpTo99_whenAddItemTwice_quantitiesAreSummed(int, int, int)[3] -- Time elapsed: 0 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <99> but was: <1>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -354,7 +354,7 @@ org.opentest4j.AssertionFailedError: expected: <99> but was: <1>
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalUpTo99_whenAddItemTwice_quantitiesAreSummed(int, int, int)[4] -- Time elapsed: 0.006 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartRepeatedAddTest.givenTotalUpTo99_whenAddItemTwice_quantitiesAreSummed(int, int, int)[4] -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <99> but was: <98>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
