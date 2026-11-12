@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: ua.kpi.tzyapz.shopline.CartTest
 -------------------------------------------------------------------------------
-Tests run: 36, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.249 s <<< FAILURE! -- in ua.kpi.tzyapz.shopline.CartTest
+Tests run: 36, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.082 s <<< FAILURE! -- in ua.kpi.tzyapz.shopline.CartTest
 ua.kpi.tzyapz.shopline.CartTest.givenEmptyName_whenAddItem_throwsIllegalArgument(String)[1] -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
@@ -42,7 +42,7 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartTest.givenQtyOutOfRange_whenAddItem_throwsIllegalArgument(int)[3] -- Time elapsed: 0.003 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartTest.givenQtyOutOfRange_whenAddItem_throwsIllegalArgument(int)[3] -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -89,7 +89,7 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartTest.givenQtyOutOfRange_whenChangeQty_throwsIllegalArgument(int)[3] -- Time elapsed: 0.006 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartTest.givenQtyOutOfRange_whenChangeQty_throwsIllegalArgument(int)[3] -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -136,7 +136,7 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartTest.givenPriceRoundingToZero_whenAddItem_throwsIllegalArgument(String)[1] -- Time elapsed: 0.005 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartTest.givenPriceRoundingToZero_whenAddItem_throwsIllegalArgument(String)[1] -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -183,7 +183,7 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.CartTest.givenPriceRoundingToZero_whenAddItem_throwsIllegalArgument(String)[2] -- Time elapsed: 0.004 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.CartTest.givenPriceRoundingToZero_whenAddItem_throwsIllegalArgument(String)[2] -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
