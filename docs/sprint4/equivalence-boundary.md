@@ -8,7 +8,7 @@
 
 - **a** і **b** — нижня і верхня межі допустимого діапазону; **a−1** і **b+1** — найближчі недопустимі значення. Для порога «від X» (BL-50, BL-60) кожен поріг має суміжні діапазони, тому значення беруться з обох боків кожного порога: X−0.01, X, X+0.01.
 - Суми — гривні з двома знаками, у тестах — `new BigDecimal("120.00")`, а не `"120"` (шкала враховується в `assertEquals`).
-- Позначка **план** у стовпці «Тест-метод» — тест ще не написано (SCRUM-136); позначка **#NN** — номер звіту про дефект із коментаря в коді тесту.
+- Усі тест-методи написано й злито в `main` (SCRUM-136, SCRUM-143); позначка **#NN** — номер звіту про дефект із коментаря в коді тесту.
 - Вимоги без числових і перелічуваних умов (BL-40: `removeItem`, `itemCount`) у таблицях не розбираються — лише класи «рядок є / рядка немає».
 
 ---
@@ -101,7 +101,7 @@
 ## BL-50 · `DiscountCalculator.volumeDiscountPercent` і `volumeDiscount`
 
 Пороги за `subtotal`: від 2000 — 5 %, від 5000 — 10 %, від 10000 — 15 %; знижка = subtotal × % / 100 з округленням HALF_UP; застосовується лише один, найвищий рівень. Верхньої межі в останнього рівня немає.
-Тест-методи (план): `givenSubtotalAtTierBoundaries_whenVolumeDiscountPercent_returnsTierPercent`, `givenSubtotalAtTierBoundaries_whenVolumeDiscount_returnsDiscountAmount`, `givenSubtotalBelow2000_whenVolumeDiscount_returnsZero`, `givenSubtotalFrom10000_whenVolumeDiscount_appliesOnlyHighestTier`, `givenNegativeSubtotal_whenVolumeDiscountPercent_throwsIllegalArgument`, `givenNegativeSubtotal_whenVolumeDiscount_throwsIllegalArgument`.
+Тест-методи (дефекти #87, #88): `givenSubtotalAtTierBoundaries_whenVolumeDiscountPercent_returnsTierPercent`, `givenSubtotalAtTierBoundaries_whenVolumeDiscount_returnsDiscountAmount`, `givenSubtotalBelow2000_whenVolumeDiscount_returnsZero`, `givenSubtotalInHigherTier_whenVolumeDiscount_appliesOnlyHighestTier`, `givenNegativeSubtotal_whenVolumeDiscountPercent_throwsIllegalArgument`, `givenNegativeSubtotal_whenVolumeDiscount_throwsIllegalArgument`.
 
 | Клас | subtotal | % | Знижка | Чому обрано |
 |---|---|---|---|---|
@@ -118,7 +118,7 @@
 | Дійсний: від 10000 | 10000.01 | 15 | 1500.00 | поруч із порогом (1500.0015 → 1500.00) |
 | Дійсний: від 10000 | 15000.00 | 15 | 2250.00 | представник верхнього класу; лише один рівень, не сума рівнів |
 
-**Округлення HALF_UP усередині рівня** (план: `givenAmountWithHalfCent_whenVolumeDiscount_roundsHalfUp`):
+**Округлення HALF_UP усередині рівня** (`givenAmountWithHalfCent_whenVolumeDiscount_roundsHalfUp`, дефект #88):
 
 | subtotal | % | Точне значення | Очікувано | Чому обрано |
 |---|---|---|---|---|
@@ -148,7 +148,7 @@
 
 ### Довжина коду 6..10 (причина `INVALID_LENGTH`)
 
-Тест-методи (план): `givenCodeLengthWithin6To10_whenValidate_isValid`, `givenCodeLengthOutOfRange_whenValidate_isInvalid`.
+Тест-методи: `givenCodeLengthWithin6To10_whenValidate_isValid`, `givenCodeLengthOutOfRange_whenValidate_isInvalid`.
 
 | Клас | Довжина | Очікувано | Чому обрано |
 |---|---|---|---|
@@ -163,7 +163,7 @@
 
 ### Дата закінчення (причина `EXPIRED`)
 
-Дійсний код: `expiresOn` не раніше за `today` (день закінчення включно). Тест-метод (план): `givenExpiryAroundToday_whenValidate_expiryDayIsInclusive` (дефект #80).
+Дійсний код: `expiresOn` не раніше за `today` (день закінчення включно). Тест-метод: `givenExpiryAroundToday_whenValidate_expiryDayIsInclusive` (дефект #80).
 
 | Клас | expiresOn | Очікувано | Чому обрано |
 |---|---|---|---|
@@ -173,7 +173,7 @@
 
 ### Одноразовий код (причина `ALREADY_USED`)
 
-Перелічувана умова. Тест-метод (план): `givenSingleUseCode_whenValidate_usedCodeIsRejected` (дефект #81).
+Перелічувана умова. Тест-метод: `givenSingleUseCode_whenValidate_usedCodeIsRejected` (дефект #81).
 
 | Клас | singleUse | used | Очікувано |
 |---|---|---|---|
@@ -185,7 +185,7 @@
 
 ### Відсоток для типу PERCENT 1..50 (причина `INVALID_PERCENT`)
 
-Діапазон [1; 50] включно. Тест-метод (план): `givenPercentValueAroundBounds_whenValidate_acceptsOnly1To50`.
+Діапазон [1; 50] включно. Тест-метод: `givenPercentValueAroundBounds_whenValidate_acceptsOnly1To50`.
 
 | Клас | Значення | Очікувано | Чому обрано |
 |---|---|---|---|
@@ -198,7 +198,7 @@
 
 ### Сума для типу FIXED: більше 0 і не більше `subtotal − знижка BL-50` (причина `INVALID_AMOUNT`)
 
-Тест-метод (план): `givenFixedValueAroundBounds_whenValidate_acceptsPositiveUpToSubtotal` і `givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount`.
+Тест-методи: `givenFixedValueAroundBounds_whenValidate_acceptsPositiveUpToSubtotal` і `givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount` (дефект #89).
 
 **А. Без знижки за обсяг** (subtotal 1000.00 < 2000, ліміт = 1000.00): діапазон (0; 1000.00].
 
@@ -222,7 +222,7 @@
 
 ### Причина відмови при кількох порушеннях
 
-Повертається причина першої не виконаної умови в порядку SRS: `INVALID_LENGTH` → `EXPIRED` → `ALREADY_USED` → `INVALID_PERCENT` / `INVALID_AMOUNT`. Тест-метод (план): `givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder`. **Перевіряється лише після відповіді на Q1** (код причини чи текст).
+Повертається причина першої не виконаної умови в порядку SRS: `INVALID_LENGTH` → `EXPIRED` → `ALREADY_USED` → `INVALID_PERCENT` / `INVALID_AMOUNT`. Тест-метод: `givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder` (червоний через #81). Причини порівнюються між собою, а не з текстом, тому відповідь на Q1 тест не блокує.
 
 | Порушено одночасно | Очікувана причина |
 |---|---|
@@ -329,11 +329,11 @@
 
 ## Що ще не вирішено
 
-Значення для BL-70 залежать від відповідей на питання аркуша «Питання» у [coverage.xlsx](coverage.xlsx):
+Відкриті питання з аркуша «Питання» у [coverage.xlsx](coverage.xlsx). Написані тести від відповідей не залежать, але вимога BL-70 може уточнитися:
 
 - **Q1** — чи перевіряти причину відмови як код (`INVALID_LENGTH` тощо) чи як непорожній текст (код повертає українські фрази);
 - **Q2** — чи входить формат символів A–Z0–9 у вимогу BL-70;
 - **Q4** — використаний багаторазовий код;
 - **Q5** — поведінка при `null` (subtotal, тип промокоду): в SRS не описана, у тестах не перевіряємо.
 
-Таблицю складено станом на 11.11.2026 для передачі КТ і авторкам тестів (Дрєпіна А. — BL-20, BL-60; Коротка К. — BL-10, BL-40; Тимчак А. — BL-80).
+Таблицю складено 11.11.2026, оновлено 12.11.2026 після злиття всіх тестів у `main` (SCRUM-137) для передачі КТ і авторкам тестів (Дрєпіна А. — BL-20, BL-60; Коротка К. — BL-10, BL-40; Тимчак А. — BL-80).
