@@ -1,6 +1,6 @@
 # Спринт 4 — Автоматизація: JUnit 5 + Selenium
 
-Команда: С · Продукт: №1 «ШопЛайн» · Спринт: 4 «Автоматизація: JUnit 5 + Selenium» (02/05.11–12.11.2026) · Епік: [SCRUM-127](https://breakyshort.atlassian.net/browse/SCRUM-127) · Дата зведення: 12.11.2026
+Команда: С · Продукт: №1 «ШопЛайн» · Спринт: 4 «Автоматизація: JUnit 5 + Selenium» (05.11–12.11.2026; у Jira з 02.11) · Епік: [SCRUM-127](https://breakyshort.atlassian.net/browse/SCRUM-127) · Дата зведення: 12.11.2026
 
 ## Ролі
 
