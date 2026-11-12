@@ -77,9 +77,9 @@
 Стан на 12.11.2026. Результати та пояснення — у [README.md](README.md).
 
 - [x] Кожна BL-вимога покрита ≥1 тест-методом: BL-10, 20, 40, 50, 60, 70, 80 — 46 тест-методів у [coverage.xlsx](coverage.xlsx) (BL-30 вилучена в SRS 1.1).
-- [x] Тести виконано, результат зафіксовано в surefire-reports. Юніт-тести модуля v1: `Tests run: 140, Failures: 28, Errors: 1, Skipped: 0` — усі 29 червоних тестів фіксують закладені дефекти (#72–#74, #77, #80, #81, #87–#89), їх не виправляють і не вимикають (методичка, п. 4.9); таблиця відповідності в README. `Failures: 0, Errors: 0` — для UI-тестів (6 з 6) і для зелених класів.
+- [x] Усі тести зелені: `mvn clean test` → `Tests run: N, Failures: 0, Errors: 0` — виконано з відхиленням: тести виконано, результат зафіксовано в surefire-reports. Юніт-тести модуля v1: `Tests run: 140, Failures: 28, Errors: 1, Skipped: 0` — усі 29 червоних тестів фіксують закладені дефекти (#72–#74, #77, #80, #81, #87–#89), їх не виправляють і не вимикають (методичка, п. 4.9); таблиця відповідності в README. `Failures: 0, Errors: 0` — для UI-тестів (6 з 6) і для зелених класів.
 - [x] UI-тести з `@Tag("ui")` проходять: `mvn test -DexcludedGroups=none` → UI: `Tests run: 6, Failures: 0, Errors: 0`.
-- [x] Coverage актуальний, аркуш Review заповнений (PR #94, #96).
+- [x] Coverage актуальний, аркуш Review заповнений (PR #94, #96): reviewed 40 із 41 тест-методу, одне зауваження відкрите (`givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder`, П2 і П7).
 - [x] `docs/sprint4/` містить README.md і surefire-reports/.
 - [x] retro.md злито в main (PR #95; чернетка — дату ретро, присутніх і поля «__» вписати після ретро).
 - [x] Усі задачі Jira — Done.
