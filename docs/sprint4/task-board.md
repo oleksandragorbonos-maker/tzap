@@ -81,5 +81,5 @@
 - [x] UI-тести з `@Tag("ui")` проходять: `mvn test -DexcludedGroups=none` → UI: `Tests run: 6, Failures: 0, Errors: 0`.
 - [x] Coverage актуальний, аркуш Review заповнений (PR #94, #96): reviewed 40 із 41 тест-методу, одне зауваження відкрите (`givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder`, П2 і П7).
 - [x] `docs/sprint4/` містить README.md і surefire-reports/.
-- [x] retro.md злито в main (PR #95; дату ретро і присутніх вписано після ретро 12.11.2026; кількість peer-review форм ще не внесено).
+- [x] retro.md злито в main (PR #95; дату ретро і присутніх вписано після ретро 12.11.2026; peer-review форми — 4 з 4).
 - [x] Усі задачі Jira — Done.
