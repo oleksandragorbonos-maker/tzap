@@ -222,7 +222,7 @@
 
 ### Причина відмови при кількох порушеннях
 
-Повертається причина першої не виконаної умови в порядку SRS: `INVALID_LENGTH` → `EXPIRED` → `ALREADY_USED` → `INVALID_PERCENT` / `INVALID_AMOUNT`. Тест-метод: `givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder` (червоний через #81). Причини порівнюються між собою, а не з текстом, тому відповідь на Q1 тест не блокує.
+Повертається причина першої не виконаної умови в порядку SRS: `INVALID_LENGTH` → `EXPIRED` → `ALREADY_USED` → `INVALID_PERCENT` / `INVALID_AMOUNT`. Тест-методи (по одному на пару порушень): `givenBadLengthAndExpiry_whenValidate_returnsLengthReason`, `givenExpiryAndUsedSingleUse_whenValidate_returnsExpiryReason`, `givenUsedSingleUseAndBadPercent_whenValidate_returnsUsedReason` (останній червоний через #81). Причини порівнюються між собою, а не з текстом, тому відповідь на Q1 тест не блокує.
 
 | Порушено одночасно | Очікувана причина |
 |---|---|

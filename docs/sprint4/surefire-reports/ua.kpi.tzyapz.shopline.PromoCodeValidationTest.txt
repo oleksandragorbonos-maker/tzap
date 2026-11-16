@@ -1,37 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: ua.kpi.tzyapz.shopline.PromoCodeValidationTest
 -------------------------------------------------------------------------------
-Tests run: 35, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.104 s <<< FAILURE! -- in ua.kpi.tzyapz.shopline.PromoCodeValidationTest
-ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder -- Time elapsed: 0.003 s <<< FAILURE!
-org.opentest4j.MultipleFailuresError: 
-Multiple Failures (1 failure)
-	org.opentest4j.AssertionFailedError: Одноразовість і відсоток: має повертатися причина одноразовості ==> expected: <> but was: <Відсоток знижки має бути в межах 1..50>
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
-	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2944)
-	at ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder(PromoCodeValidationTest.java:205)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	Suppressed: org.opentest4j.AssertionFailedError: Одноразовість і відсоток: має повертатися причина одноразовості ==> expected: <> but was: <Відсоток знижки має бути в межах 1..50>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at ua.kpi.tzyapz.shopline.PromoCodeValidationTest.lambda$givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder$6(PromoCodeValidationTest.java:210)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 7 more
-
+Tests run: 37, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.125 s <<< FAILURE! -- in ua.kpi.tzyapz.shopline.PromoCodeValidationTest
 ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenSingleUseCode_whenValidate_usedCodeIsRejected(boolean, boolean)[1] -- Time elapsed: 0.003 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Одноразовий код, used = true:  ==> expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
@@ -73,7 +43,37 @@ org.opentest4j.AssertionFailedError: Одноразовий код, used = true:
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount(String, String, boolean)[4] -- Time elapsed: 0.003 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenUsedSingleUseAndBadPercent_whenValidate_returnsUsedReason -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+Multiple Failures (1 failure)
+	org.opentest4j.AssertionFailedError: Має повертатися причина одноразовості ==> expected: <> but was: <Відсоток знижки має бути в межах 1..50>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2944)
+	at ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenUsedSingleUseAndBadPercent_whenValidate_returnsUsedReason(PromoCodeValidationTest.java:235)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: org.opentest4j.AssertionFailedError: Має повертатися причина одноразовості ==> expected: <> but was: <Відсоток знижки має бути в межах 1..50>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at ua.kpi.tzyapz.shopline.PromoCodeValidationTest.lambda$givenUsedSingleUseAndBadPercent_whenValidate_returnsUsedReason$7(PromoCodeValidationTest.java:237)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 7 more
+
+ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount(String, String, boolean)[4] -- Time elapsed: 0 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Підсумок 2000.00, фіксована сума 1900.01:  ==> expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -114,7 +114,7 @@ org.opentest4j.AssertionFailedError: Підсумок 2000.00, фіксован�
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount(String, String, boolean)[6] -- Time elapsed: 0.001 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount(String, String, boolean)[6] -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Підсумок 4999.99, фіксована сума 4750.00:  ==> expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -155,7 +155,7 @@ org.opentest4j.AssertionFailedError: Підсумок 4999.99, фіксован�
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount(String, String, boolean)[8] -- Time elapsed: 0.002 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount(String, String, boolean)[8] -- Time elapsed: 0.004 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Підсумок 5000.00, фіксована сума 4500.01:  ==> expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -196,7 +196,7 @@ org.opentest4j.AssertionFailedError: Підсумок 5000.00, фіксован�
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount(String, String, boolean)[10] -- Time elapsed: 0.001 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenFixedValueAndVolumeDiscount_whenValidate_limitIsSubtotalMinusDiscount(String, String, boolean)[10] -- Time elapsed: 0 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Підсумок 10000.00, фіксована сума 8500.01:  ==> expected: <false> but was: <true>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -237,7 +237,7 @@ org.opentest4j.AssertionFailedError: Підсумок 10000.00, фіксован
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenExpiryAroundToday_whenValidate_expiryDayIsInclusive(int, boolean)[2] -- Time elapsed: 0.001 s <<< FAILURE!
+ua.kpi.tzyapz.shopline.PromoCodeValidationTest.givenExpiryAroundToday_whenValidate_expiryDayIsInclusive(int, boolean)[2] -- Time elapsed: 0 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Результат для expiresOn = today 0 дн.: Термін дії промокоду минув ==> expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)

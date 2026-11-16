@@ -183,31 +183,58 @@ class PromoCodeValidationTest {
 
     // Формат причини (код INVALID_* чи текст) — питання Q1, тому перевіряється не текст, а правило SRS:
     // при кількох порушеннях повертається причина ПЕРШОГО з них (довжина → дата → одноразовість → відсоток).
-    // Рядок про одноразовість червоний через дефект #81.
+    // Три сценарії — три методи, щоб червоний результат одного (#81) не ховав зелені інші.
+
+    /** Промокод типу PERCENT із довільною комбінацією порушень. */
+    private static PromoCode anyPromo(String code, String percent, LocalDate expiresOn, boolean singleUse, boolean used) {
+        return new PromoCode(code, PromoCode.Type.PERCENT, new BigDecimal(percent), expiresOn, singleUse, used);
+    }
+
+    private String reasonOf(PromoCode promo) {
+        return validate(promo, "1000.00").reason();
+    }
+
     @Test
-    @DisplayName("BL-70: при кількох порушеннях повертається причина першого за порядком SRS")
-    void givenSeveralViolations_whenValidate_returnsFirstReasonInSrsOrder() {
-        // arrange: коди з одним порушенням — еталонні причини
-        String lengthReason = validate(percentPromo("ABC", "10", FAR_FUTURE), "1000.00").reason();
-        String expiredReason = validate(percentPromo(VALID_CODE, "10", TODAY.minusDays(1)), "1000.00").reason();
-        String usedReason = validate(singleUsePromo(true), "1000.00").reason();
+    @DisplayName("BL-70: довжина і дата порушені разом — повертається причина довжини")
+    void givenBadLengthAndExpiry_whenValidate_returnsLengthReason() {
+        String lengthReason = reasonOf(anyPromo("ABC", "10", FAR_FUTURE, false, false));
+        String expiredReason = reasonOf(anyPromo(VALID_CODE, "10", TODAY.minusDays(1), false, false));
 
-        // act: коди з кількома порушеннями
-        String lengthAndExpired = validate(percentPromo("ABC", "10", TODAY.minusDays(1)), "1000.00").reason();
-        PromoCode expiredAndUsed = new PromoCode(VALID_CODE, PromoCode.Type.PERCENT, new BigDecimal("10"),
-                TODAY.minusDays(1), true, true);
-        String expiredAndUsedReason = validate(expiredAndUsed, "1000.00").reason();
-        PromoCode usedAndBadPercent = new PromoCode(VALID_CODE, PromoCode.Type.PERCENT, new BigDecimal("77"),
-                FAR_FUTURE, true, true);
-        String usedAndBadPercentReason = validate(usedAndBadPercent, "1000.00").reason();
+        String reason = reasonOf(anyPromo("ABC", "10", TODAY.minusDays(1), false, false));
 
-        // assert
         assertAll(
                 () -> assertNotEquals(lengthReason, expiredReason, "Причини довжини і дати мають відрізнятися"),
+                () -> assertEquals(lengthReason, reason, "Має повертатися причина довжини")
+        );
+    }
+
+    @Test
+    @DisplayName("BL-70: дата і одноразовість порушені разом — повертається причина дати")
+    void givenExpiryAndUsedSingleUse_whenValidate_returnsExpiryReason() {
+        String expiredReason = reasonOf(anyPromo(VALID_CODE, "10", TODAY.minusDays(1), false, false));
+        String usedReason = reasonOf(anyPromo(VALID_CODE, "10", FAR_FUTURE, true, true));
+
+        String reason = reasonOf(anyPromo(VALID_CODE, "10", TODAY.minusDays(1), true, true));
+
+        assertAll(
                 () -> assertNotEquals(expiredReason, usedReason, "Причини дати і одноразовості мають відрізнятися"),
-                () -> assertEquals(lengthReason, lengthAndExpired, "Довжина і дата: має повертатися причина довжини"),
-                () -> assertEquals(expiredReason, expiredAndUsedReason, "Дата і одноразовість: має повертатися причина дати"),
-                () -> assertEquals(usedReason, usedAndBadPercentReason, "Одноразовість і відсоток: має повертатися причина одноразовості")
+                () -> assertEquals(expiredReason, reason, "Має повертатися причина дати")
+        );
+    }
+
+    // Дефект #81: validate не перевіряє used, тому еталонна «причина одноразовості» порожня
+    // і тест червоний. Після виправлення модуля він має стати зеленим без змін.
+    @Test
+    @DisplayName("BL-70: одноразовість і відсоток порушені разом — повертається причина одноразовості")
+    void givenUsedSingleUseAndBadPercent_whenValidate_returnsUsedReason() {
+        String usedReason = reasonOf(anyPromo(VALID_CODE, "10", FAR_FUTURE, true, true));
+        String percentReason = reasonOf(anyPromo(VALID_CODE, "77", FAR_FUTURE, false, false));
+
+        String reason = reasonOf(anyPromo(VALID_CODE, "77", FAR_FUTURE, true, true));
+
+        assertAll(
+                () -> assertNotEquals(usedReason, percentReason, "Причини одноразовості і відсотка мають відрізнятися"),
+                () -> assertEquals(usedReason, reason, "Має повертатися причина одноразовості")
         );
     }
 
