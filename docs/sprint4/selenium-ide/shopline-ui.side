@@ -1,0 +1,181 @@
+{
+  "id": "af16681f-4303-4fc5-ac6f-de971386b9f6",
+  "version": "2.0",
+  "name": "shopline-ui",
+  "url": "https://practicesoftwaretesting.com/auth/login",
+  "tests": [{
+    "id": "0e8b24bc-115f-40e3-a23e-ebfa14dc0d4e",
+    "name": "TC-001-search-pliers",
+    "commands": [{
+      "id": "68f8a69c-1755-4d42-b503-dae02a9b567b",
+      "comment": "",
+      "command": "open",
+      "target": "https://practicesoftwaretesting.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc65fe45-c504-437b-82f5-50356fb1b543",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "951x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b151327-f92f-416a-8a35-205548ca76dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"search-query\"]",
+      "targets": [
+        ["css=*[data-test=\"search-query\"]", "css:data-attr"],
+        ["id=search-query", "id"],
+        ["css=#search-query", "css:finder"],
+        ["xpath=//input[@id='search-query']", "xpath:attributes"],
+        ["xpath=//div[@id='filters']/form[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2493da6f-8595-4624-815a-a82963b22420",
+      "comment": "",
+      "command": "type",
+      "target": "css=*[data-test=\"search-query\"]",
+      "targets": [
+        ["css=*[data-test=\"search-query\"]", "css:data-attr"],
+        ["id=search-query", "id"],
+        ["css=#search-query", "css:finder"],
+        ["xpath=//input[@id='search-query']", "xpath:attributes"],
+        ["xpath=//div[@id='filters']/form[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "pliers"
+    }, {
+      "id": "071c69fc-8223-4bee-aec8-7a20583eac05",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=*[data-test=\"search-query\"]",
+      "targets": [
+        ["css=*[data-test=\"search-query\"]", "css:data-attr"],
+        ["id=search-query", "id"],
+        ["css=#search-query", "css:finder"],
+        ["xpath=//input[@id='search-query']", "xpath:attributes"],
+        ["xpath=//div[@id='filters']/form[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }, {
+    "id": "76596b9c-c8ad-42c3-a1a6-8a3876a384ec",
+    "name": "TC-004-login-error",
+    "commands": [{
+      "id": "67182259-981a-47ea-a2f7-21d4be8b5c7a",
+      "comment": "",
+      "command": "open",
+      "target": "https://practicesoftwaretesting.com/auth/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66c834d3-0471-46c7-aa22-3bf42d1da290",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "951x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecf1a495-b4f2-4316-802b-9bab4b1d9b97",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-brand",
+      "targets": [
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d630900-eaa5-4450-b508-c6e0206cc764",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.navbar-brand",
+      "targets": [
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f08ee35-c5f7-4964-a947-58db619fb159",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"email\"]",
+      "targets": [
+        ["css=*[data-test=\"email\"]", "css:data-attr"],
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e778e031-f1c5-4ae0-b1ca-b40676806d0e",
+      "comment": "",
+      "command": "type",
+      "target": "css=*[data-test=\"email\"]",
+      "targets": [
+        ["css=*[data-test=\"email\"]", "css:data-attr"],
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "shopline.ta.test@example.com"
+    }, {
+      "id": "7dca37cb-b88d-459f-ad12-a941069c4179",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"password\"]",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//app-password-input/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1894a20-baf9-4836-9fe9-eaeaddbb0304",
+      "comment": "",
+      "command": "type",
+      "target": "css=*[data-test=\"password\"]",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//app-password-input/div/input", "xpath:position"]
+      ],
+      "value": "Test-pass1"
+    }, {
+      "id": "236c2569-28a0-407c-b819-5eacfe1027ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"login-submit\"]",
+      "targets": [
+        ["css=*[data-test=\"login-submit\"]", "css:data-attr"],
+        ["css=.btnSubmit", "css:finder"],
+        ["xpath=//input[@value='Login']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "02b63675-6d46-4b51-a5f3-050dc9a4720e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0e8b24bc-115f-40e3-a23e-ebfa14dc0d4e"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
