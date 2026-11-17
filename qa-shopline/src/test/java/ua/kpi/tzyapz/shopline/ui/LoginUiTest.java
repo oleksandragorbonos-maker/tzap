@@ -42,8 +42,8 @@ class LoginUiTest {
     }
 
     @Test
-    @DisplayName("TC-004: зареєстрована адреса з неправильним паролем показує повідомлення про помилку")
-    void givenRegisteredEmailWrongPassword_whenLogin_errorMessageIsShown() {
+    @DisplayName("TC-004: незареєстрована адреса показує повідомлення про помилку")
+    void givenUnregisteredEmail_whenLogin_errorMessageIsShown() {
         driver.get(BASE_URL + "auth/login");
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
