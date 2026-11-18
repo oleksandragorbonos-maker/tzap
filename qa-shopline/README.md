@@ -13,8 +13,12 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 17)   # macOS; на Windows/Linux �
 mvn -q -B test
 ```
 
-Звіт Surefire з'явиться у `target/surefire-reports/`. UI-тести (тег `ui`) у цьому модулі відсутні,
-тому властивість `excludedGroups` із `pom.xml` на результат не впливає.
+Звіт Surefire з'явиться у `target/surefire-reports/`. UI-тести (тег `ui`, підпакет `ui`) за замовчуванням
+виключені (`excludedGroups` у `pom.xml`); їх запускають командою `mvn test -DexcludedGroups=none` (потрібен Chrome).
+
+Очікуваний результат `mvn test` на v1: `Tests run: 142, Failures: 28, Errors: 1` — червоні тести фіксують
+закладені дефекти модуля (звіти #72–#74, #77, #80, #81, #87–#89), їх не вимикають і не виправляють до спринта 5.
+Підсумок за класами — у `docs/sprint4/README.md`.
 
 ## Що всередині
 
@@ -27,7 +31,19 @@ mvn -q -B test
 | `PromoCodeValidator` | Перевірка промокоду `validate(promo, today, subtotal)` і сума знижки `apply(promo, today, subtotal)` | BL-70, BL-80 |
 | `PromoCode` (record) | Дані промокоду: код, тип (`PERCENT`/`FIXED`), значення, дата закінчення, ознаки одноразовості й використання | BL-70 |
 
-`src/test/java/.../ExampleTest.java` — два тести-зразки стилю (JUnit 5, `@DisplayName` з посиланням на BL-xx).
+## Тести команди (`src/test/java/ua/kpi/tzyapz/shopline/`)
+
+| Клас | BL | Автор(ка) |
+|---|---|---|
+| `CartTest` | BL-10, BL-40 | Коротка Ксенія |
+| `CartRepeatedAddTest` | BL-20 | Дрєпіна Анастасія |
+| `ShippingFeeTest` | BL-60 | Дрєпіна Анастасія |
+| `VolumeDiscountTest` | BL-50 | Горбонос Олександра |
+| `PromoCodeValidationTest` | BL-70 | Горбонос Олександра |
+| `PromoCodeValidatorTest` | BL-80 | Тимчак Анастасія |
+| `ui/SearchUiTest`, `ui/LoginUiTest`, `ui/CartUiTest`, `ui/ContactUiTest` | UI (Selenium WebDriver, `@Tag("ui")`) | команда |
+
+Імена методів — `given<Умова>_when<Дія>_<Очікування>`, `@DisplayName("BL-xx: …")`. `ExampleTest` — два тести-зразки зі стартового проєкту.
 
 ## Реалізовані правила (коротко)
 
