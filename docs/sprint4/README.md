@@ -73,7 +73,9 @@ mvn test -DexcludedGroups=none -Dtest="*UiTest"   # лише UI-тести
 ### Selenium IDE (план і факт)
 
 План (розд. 5.1, п. 6 методички): 1–2 сценарії в Selenium IDE на demo-застосунку, відтворення, проєкт `*.side` у репозиторії, експорт у Java JUnit як чернетка.
-Факт: записано 2 сценарії — `TC-001-search-pliers` і `TC-004-login-error` ([`selenium-ide/shopline-ui.side`](selenium-ide/shopline-ui.side)). Java-експорт: [`selenium-ide/export/`](selenium-ide/export) — `TC001SearchPliersTest.java`, `TC004LoginErrorTest.java` (PR #108).
+Факт: записано 2 сценарії — `TC-001-search-pliers` і `TC-004-login-error` ([`selenium-ide/shopline-ui.side`](selenium-ide/shopline-ui.side)). Перевірки: TC-001 — `assertText` терміна пошуку `pliers` і `assertElementPresent` назви товару; TC-004 — `assertText` повідомлення `Invalid email or password` (PR #109).
+Відтворення: Selenium IDE для Chrome вилучено з Chrome Web Store, а в Firefox відтворення падає на команді `type` (`initKeyEvent is not a function`), тому проєкт запущено в Chrome через `selenium-side-runner`: `Tests: 2 passed, 2 total` (18.11.2026, скріншот у PR #109).
+Java-експорт: [`selenium-ide/export/`](selenium-ide/export) — `TC001searchpliersTest.java`, `TC004loginerrorTest.java` (повторний експорт у PR #109).
 
 ### Дефекти модуля (Severity / Priority)
 
