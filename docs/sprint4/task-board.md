@@ -85,8 +85,8 @@
 - [x] `docs/sprint4/` містить README.md і surefire-reports/.
 - [x] retro.md злито в main (PR #95; дату ретро і присутніх вписано після ретро 12.11.2026; peer-review форми — 4 з 4).
 - [x] Усі задачі Jira — Done (23 задачі спринта; доопрацювання після рев'ю — розділ 4).
-- [ ] 1–2 сценарії Selenium IDE і Java-експорт — частково на 17.11.2026: два сценарії (TC-001, TC-004) записано в [`selenium-ide/shopline-ui.side`](selenium-ide/shopline-ui.side) (PR #102); Java-експорту в репозиторії немає, доопрацювання № 1.
-- [x] Перелік UI-сценаріїв [`docs/ui-scenarios.md`](../ui-scenarios.md) і UI-тести в аркуші Coverage (PR #99). Метод TC-004 у `LoginUiTest` перейменовано на `givenUnregisteredEmail_whenLogin_errorMessageIsShown`, як у переліку й Coverage (PR #102).
+- [x] 1–2 сценарії Selenium IDE (`selenium-ide/*.side`) і Java-експорт у `selenium-ide/export/` — виконано в [SCRUM-149](https://breakyshort.atlassian.net/browse/SCRUM-149).
+- [x] Перелік UI-сценаріїв [`docs/ui-scenarios.md`](../ui-scenarios.md) і UI-тести в аркуші Coverage (PR #99). Доопрацювання № 11: метод перейменовано на `givenUnregisteredEmail_whenLogin_errorMessageIsShown` в [SCRUM-149](https://breakyshort.atlassian.net/browse/SCRUM-149).
 
 ## 4. Доопрацювання після рев'ю чернетки (16.11.2026)
 
@@ -94,7 +94,7 @@
 
 | № | Доопрацювання | Виконавиця | Важливість | Статус | Де |
 |---|---|---|---|---|---|
-| 1 | Selenium IDE: 1–2 записані сценарії (`.side`) і Java-експорт | Коротка Ксенія (ІТ) | обов'язково | заплановано | — |
+| 1 | Selenium IDE: 1–2 записані сценарії (`.side`) і Java-експорт | Коротка Ксенія (ІТ) | обов'язково | готово | [SCRUM-149](https://breakyshort.atlassian.net/browse/SCRUM-149) |
 | 2 | `docs/ui-scenarios.md`: TC → кроки, локатори, очікування, тест-метод | Горбонос Олександра (ТА) | обов'язково | готово | PR #99 |
 | 3 | UI-тести в аркуші Coverage | Горбонос Олександра (ТА) | обов'язково | готово | PR #99 |
 | 4 | Аркуш Review: переведено на чек-лист 5.3 методички (п.1–п.8), усі методи оцінено наново | Тимчак Анастасія (СМ) | обов'язково | готово | [SCRUM-151](https://breakyshort.atlassian.net/browse/SCRUM-151), PR #101 |
@@ -104,7 +104,7 @@
 | 8 | `docs/sprint4/README.md`: норматив Selenium IDE в план/факт, severity дефектів, номер чек-листа 5.3 замість 5.4 | Дрєпіна Анастасія (КТ) | обов'язково | заплановано | — |
 | 9 | Слід рецензента у звітах про дефекти модуля | Тимчак Анастасія (СМ) | бажано | готово: #72–#74, #77, #87–#89 — СМ; #80 і #81 (звіти СМ) — КТ, 17.11.2026 | SCRUM-151 |
 | 10 | Звіт #77: узгодити поле Priority з міткою | Дрєпіна Анастасія (КТ) | бажано | заплановано | — |
-| 11 | `LoginUiTest`: назва методу і `@DisplayName` відповідно до TC-004 | Коротка Ксенія (ІТ) | бажано | заплановано | — |
+| 11 | `LoginUiTest`: назва методу і `@DisplayName` відповідно до TC-004 | Коротка Ксенія (ІТ) | бажано | готово | [SCRUM-149](https://breakyshort.atlassian.net/browse/SCRUM-149) |
 | 12 | task-board і DoD: розподіл доопрацювань, актуальні числа прогону | Тимчак Анастасія (СМ) | бажано | готово | SCRUM-151, PR #101 |
 
 Задачі № 1 у спринті не було ні в кого, хоча норматив записано в розділі 2; її призначено ІТ як авторці UI-тестів WebDriver.
