@@ -20,9 +20,11 @@ BL-30 вилучена в SRS 1.1 (дубль BL-20). Розподіл і схе
 | Maven-проєкт (JUnit 5.10.2, Selenium 4.21.0, Surefire 3.2.5, Java 17) із модулем `ua.kpi.tzyapz.shopline` v1 | [`qa-shopline/`](../../qa-shopline) |
 | Юніт-тести (7 класів) і UI-тести (`ui`, 4 класи) | `qa-shopline/src/test/java/ua/kpi/tzyapz/shopline/` |
 | Протокол запуску Surefire (XML і TXT по кожному класу, лог UI-прогону, скріншот) | [`surefire-reports/`](surefire-reports) |
-| Простежуваність BL → тест-метод → дефект, аркуш Review (рецензії за чек-листом 5.4), питання | [`coverage.xlsx`](coverage.xlsx) |
+| Простежуваність BL → тест-метод → дефект, аркуш Review (рецензії за чек-листом 5.3), питання | [`coverage.xlsx`](coverage.xlsx) |
 | Класи еквівалентності та граничні значення | [`equivalence-boundary.md`](equivalence-boundary.md) |
 | Розподіл задач, години, Definition of Done | [`task-board.md`](task-board.md) |
+| Сценарії Selenium IDE (проєкт `.side`: TC-001, TC-004) | [`selenium-ide/shopline-ui.side`](selenium-ide/shopline-ui.side) |
+| Java-експорт сценаріїв Selenium IDE (JUnit, чернетка) | [`selenium-ide/export/`](selenium-ide/export) |
 | Протокол ретроспективи | [`retro.md`](retro.md) |
 | Звіти про дефекти модуля | GitHub Issues з міткою `module` ([#72](https://github.com/oleksandragorbonos-maker/tzap/issues/72)–[#74](https://github.com/oleksandragorbonos-maker/tzap/issues/74), [#77](https://github.com/oleksandragorbonos-maker/tzap/issues/77), [#80](https://github.com/oleksandragorbonos-maker/tzap/issues/80), [#81](https://github.com/oleksandragorbonos-maker/tzap/issues/81), [#87](https://github.com/oleksandragorbonos-maker/tzap/issues/87)–[#89](https://github.com/oleksandragorbonos-maker/tzap/issues/89)) |
 
@@ -67,6 +69,27 @@ mvn test -DexcludedGroups=none -Dtest="*UiTest"   # лише UI-тести
 | `LoginUiTest` | TC-004 | 1 |
 | `CartUiTest` | TC-028, TC-014 | 2 |
 | `ContactUiTest` | TC-009 | 1 |
+
+### Selenium IDE (план і факт)
+
+План (розд. 5.1, п. 6 методички): 1–2 сценарії в Selenium IDE на demo-застосунку, відтворення, проєкт `*.side` у репозиторії, експорт у Java JUnit як чернетка.
+Факт: записано 2 сценарії — `TC-001-search-pliers` і `TC-004-login-error` ([`selenium-ide/shopline-ui.side`](selenium-ide/shopline-ui.side)). Java-експорт: [`selenium-ide/export/`](selenium-ide/export) — `TC001SearchPliersTest.java`, `TC004LoginErrorTest.java` (PR #108).
+
+### Дефекти модуля (Severity / Priority)
+
+| Звіт | Вимога | Тест-клас | Severity | Priority |
+|---|---|---|---|---|
+| [#72](https://github.com/oleksandragorbonos-maker/tzap/issues/72) | BL-10 | `CartTest` | normal | P3 |
+| [#73](https://github.com/oleksandragorbonos-maker/tzap/issues/73) | BL-10 | `CartTest` | major | P3 |
+| [#74](https://github.com/oleksandragorbonos-maker/tzap/issues/74) | BL-10 | `CartTest` | minor | P3 |
+| [#77](https://github.com/oleksandragorbonos-maker/tzap/issues/77) | BL-20 | `CartRepeatedAddTest` | major | P3 |
+| [#80](https://github.com/oleksandragorbonos-maker/tzap/issues/80) | BL-80 (BL-70) | `PromoCodeValidatorTest`, `PromoCodeValidationTest` | normal | P3 |
+| [#81](https://github.com/oleksandragorbonos-maker/tzap/issues/81) | BL-80 (BL-70) | `PromoCodeValidatorTest`, `PromoCodeValidationTest` | major | P3 |
+| [#87](https://github.com/oleksandragorbonos-maker/tzap/issues/87) | BL-50 | `VolumeDiscountTest` | normal | P3 |
+| [#88](https://github.com/oleksandragorbonos-maker/tzap/issues/88) | BL-50 | `VolumeDiscountTest` | minor | P3 |
+| [#89](https://github.com/oleksandragorbonos-maker/tzap/issues/89) | BL-70 | `PromoCodeValidationTest` | major | P3 |
+
+Priority P3 в усіх звітах: жоден дефект не блокує виконання тест-кейсу (таблиця 4.13 спринта 3, критерій «усе інше»).
 
 ## Відкриті питання
 
