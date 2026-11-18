@@ -2,7 +2,7 @@
   "id": "af16681f-4303-4fc5-ac6f-de971386b9f6",
   "version": "2.0",
   "name": "shopline-ui",
-  "url": "https://practicesoftwaretesting.com/auth/login",
+  "url": "https://practicesoftwaretesting.com",
   "tests": [{
     "id": "0e8b24bc-115f-40e3-a23e-ebfa14dc0d4e",
     "name": "TC-001-search-pliers",
@@ -62,6 +62,33 @@
         ["xpath=//input", "xpath:position"]
       ],
       "value": "${KEY_ENTER}"
+    }, {
+      "id": "ad4b8535-5345-42a0-98da-bb8f3f15fb5f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=*[data-test=\"search-term\"]",
+      "targets": [
+        ["css=*[data-test=\"search-term\"]", "css:data-attr"]
+      ],
+      "value": "15000"
+    }, {
+      "id": "f3dea886-80ba-4ba2-9460-14751e160b41",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=*[data-test=\"search-term\"]",
+      "targets": [
+        ["css=*[data-test=\"search-term\"]", "css:data-attr"]
+      ],
+      "value": "pliers"
+    }, {
+      "id": "1d490486-f203-4d75-949b-c1c8a9c14bb7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=*[data-test=\"product-name\"]",
+      "targets": [
+        ["css=*[data-test=\"product-name\"]", "css:data-attr"]
+      ],
+      "value": ""
     }]
   }, {
     "id": "76596b9c-c8ad-42c3-a1a6-8a3876a384ec",
@@ -79,28 +106,6 @@
       "command": "setWindowSize",
       "target": "951x692",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "ecf1a495-b4f2-4316-802b-9bab4b1d9b97",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.navbar-brand",
-      "targets": [
-        ["css=.navbar-brand", "css:finder"],
-        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
-        ["xpath=//nav/div/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3d630900-eaa5-4450-b508-c6e0206cc764",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.navbar-brand",
-      "targets": [
-        ["css=.navbar-brand", "css:finder"],
-        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
-        ["xpath=//nav/div/a", "xpath:position"]
-      ],
       "value": ""
     }, {
       "id": "0f08ee35-c5f7-4964-a947-58db619fb159",
@@ -166,6 +171,24 @@
         ["xpath=//div[3]/input", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "523628bc-257b-4d34-97aa-c148cbc0fb33",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=*[data-test=\"login-error\"]",
+      "targets": [
+        ["css=*[data-test=\"login-error\"]", "css:data-attr"]
+      ],
+      "value": "15000"
+    }, {
+      "id": "5d88a376-1197-4291-a9ca-b758b635b461",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=*[data-test=\"login-error\"]",
+      "targets": [
+        ["css=*[data-test=\"login-error\"]", "css:data-attr"]
+      ],
+      "value": "Invalid email or password"
     }]
   }],
   "suites": [{
@@ -174,8 +197,8 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["0e8b24bc-115f-40e3-a23e-ebfa14dc0d4e"]
+    "tests": ["0e8b24bc-115f-40e3-a23e-ebfa14dc0d4e", "76596b9c-c8ad-42c3-a1a6-8a3876a384ec"]
   }],
-  "urls": ["https://www.google.com/"],
+  "urls": ["https://practicesoftwaretesting.com/"],
   "plugins": []
 }
