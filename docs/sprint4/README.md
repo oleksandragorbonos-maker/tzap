@@ -24,6 +24,7 @@ BL-30 вилучена в SRS 1.1 (дубль BL-20). Розподіл і схе
 | Класи еквівалентності та граничні значення | [`equivalence-boundary.md`](equivalence-boundary.md) |
 | Розподіл задач, години, Definition of Done | [`task-board.md`](task-board.md) |
 | Сценарії Selenium IDE (проєкт `.side`: TC-001, TC-004) | [`selenium-ide/shopline-ui.side`](selenium-ide/shopline-ui.side) |
+| Java-експорт сценаріїв Selenium IDE (JUnit, чернетка) | [`selenium-ide/export/`](selenium-ide/export) |
 | Протокол ретроспективи | [`retro.md`](retro.md) |
 | Звіти про дефекти модуля | GitHub Issues з міткою `module` ([#72](https://github.com/oleksandragorbonos-maker/tzap/issues/72)–[#74](https://github.com/oleksandragorbonos-maker/tzap/issues/74), [#77](https://github.com/oleksandragorbonos-maker/tzap/issues/77), [#80](https://github.com/oleksandragorbonos-maker/tzap/issues/80), [#81](https://github.com/oleksandragorbonos-maker/tzap/issues/81), [#87](https://github.com/oleksandragorbonos-maker/tzap/issues/87)–[#89](https://github.com/oleksandragorbonos-maker/tzap/issues/89)) |
 
@@ -72,7 +73,7 @@ mvn test -DexcludedGroups=none -Dtest="*UiTest"   # лише UI-тести
 ### Selenium IDE (план і факт)
 
 План (розд. 5.1, п. 6 методички): 1–2 сценарії в Selenium IDE на demo-застосунку, відтворення, проєкт `*.side` у репозиторії, експорт у Java JUnit як чернетка.
-Факт: записано 2 сценарії — `TC-001-search-pliers` і `TC-004-login-error` ([`selenium-ide/shopline-ui.side`](selenium-ide/shopline-ui.side)). Java-експорт (`selenium-ide/export/`) ще не збережено — відкрито.
+Факт: записано 2 сценарії — `TC-001-search-pliers` і `TC-004-login-error` ([`selenium-ide/shopline-ui.side`](selenium-ide/shopline-ui.side)). Java-експорт: [`selenium-ide/export/`](selenium-ide/export) — `TC001SearchPliersTest.java`, `TC004LoginErrorTest.java` (PR #108).
 
 ### Дефекти модуля (Severity / Priority)
 
