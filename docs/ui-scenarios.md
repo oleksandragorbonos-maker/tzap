@@ -16,12 +16,10 @@
 |---|---|---|---|
 | TC-001 | F-60 | Пошук у нижньому регістрі | `SearchUiTest` · `givenLowercaseQuery_whenSearch_allProductNamesContainQuery` |
 | TC-022 | F-60 | Пошук «Hammer» і скидання кнопкою «X» | `SearchUiTest` · `givenSearchQuery_whenResetSearch_moreProductsAppear` |
-| TC-004 | F-20 | Вхід із незареєстрованою адресою | `LoginUiTest` · `givenUnregisteredEmail_whenLogin_errorMessageIsShown` ¹ |
+| TC-004 | F-20 | Вхід із незареєстрованою адресою | `LoginUiTest` · `givenUnregisteredEmail_whenLogin_errorMessageIsShown` |
 | TC-028 | GUI-30 | Додавання товару в кошик, кількість 1 | `CartUiTest` · `givenProductPage_whenAddToCart_cartQuantityIsOne` |
 | TC-014 | F-100, GUI-70 | Зміна кількості перераховує Total | `CartUiTest` · `givenItemInCart_whenQuantityChanged_totalIsUpdated` |
 | TC-009 | F-140, GUI-50 | Контактна форма, 49 символів | `ContactUiTest` · `givenMessage49Chars_whenSubmit_validationErrorIsShown` |
-
-¹ Ім'я методу — після задачі № 11 рев'ю (`LoginUiTest`). До її злиття в коді ще `givenRegisteredEmailWrongPassword_whenLogin_errorMessageIsShown`; дані тесту вже відповідають TC-004.
 
 ---
 
@@ -59,7 +57,7 @@
 
 ## TC-004 · Вхід із незареєстрованою адресою електронної пошти
 
-**Вимога:** F-20. **Тест:** `LoginUiTest.givenUnregisteredEmail_whenLogin_errorMessageIsShown` (див. примітку ¹).
+**Вимога:** F-20. **Тест:** `LoginUiTest.givenUnregisteredEmail_whenLogin_errorMessageIsShown`.
 
 | Крок | Дія | Локатор |
 |---|---|---|
