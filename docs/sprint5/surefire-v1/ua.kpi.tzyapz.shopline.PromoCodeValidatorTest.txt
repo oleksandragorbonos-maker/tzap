@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: ua.kpi.tzyapz.shopline.PromoCodeValidatorTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.026 s <<< FAILURE! -- in ua.kpi.tzyapz.shopline.PromoCodeValidatorTest
+ua.kpi.tzyapz.shopline.PromoCodeValidatorTest.givenUsedSingleUsePromo_whenApply_throwsIllegalArgument -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at ua.kpi.tzyapz.shopline.PromoCodeValidatorTest.givenUsedSingleUsePromo_whenApply_throwsIllegalArgument(PromoCodeValidatorTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+ua.kpi.tzyapz.shopline.PromoCodeValidatorTest.givenPromoExpiresOnToday_whenApply_returnsDiscount -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.IllegalArgumentException: Термін дії промокоду минув
+	at ua.kpi.tzyapz.shopline.PromoCodeValidator.apply(PromoCodeValidator.java:81)
+	at ua.kpi.tzyapz.shopline.PromoCodeValidatorTest.givenPromoExpiresOnToday_whenApply_returnsDiscount(PromoCodeValidatorTest.java:87)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
