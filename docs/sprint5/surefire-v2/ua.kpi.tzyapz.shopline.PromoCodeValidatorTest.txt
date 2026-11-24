@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: ua.kpi.tzyapz.shopline.PromoCodeValidatorTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.036 s <<< FAILURE! -- in ua.kpi.tzyapz.shopline.PromoCodeValidatorTest
+ua.kpi.tzyapz.shopline.PromoCodeValidatorTest.givenPromoExpiresOnToday_whenApply_returnsDiscount -- Time elapsed: 0 s <<< ERROR!
+java.lang.IllegalArgumentException: Термін дії промокоду минув
+	at ua.kpi.tzyapz.shopline.PromoCodeValidator.apply(PromoCodeValidator.java:84)
+	at ua.kpi.tzyapz.shopline.PromoCodeValidatorTest.givenPromoExpiresOnToday_whenApply_returnsDiscount(PromoCodeValidatorTest.java:87)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
