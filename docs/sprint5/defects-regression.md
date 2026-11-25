@@ -6,7 +6,7 @@
 
 | Звіт | Вимога | Тест, що виявив | v1 | v2 | Severity / Priority |
 |---|---|---|---|---|---|
-| [BUG-#122](https://github.com/oleksandragorbonos-maker/tzap/issues/122) | BL-60 | `ShippingFeeTest.givenSubtotalAfterDiscount_whenShippingFee_returnsFeeByThreshold[4]` | Passed | Failed | Major / P2 |
+| [BUG-#122](https://github.com/oleksandragorbonos-maker/tzap/issues/122) | BL-60 | `ShippingFeeTest.givenSubtotalAfterDiscount_whenShippingFee_returnsFeeByThreshold[4]` | Passed | Failed | Major / P3 |
 
 ---
 
@@ -16,8 +16,8 @@
 **Джерело:** регресія v2, виявлена автотестом
 **Тест, що виявив:** `ShippingFeeTest.givenSubtotalAfterDiscount_whenShippingFee_returnsFeeByThreshold[4]` ([`qa-shopline/src/test/java/ua/kpi/tzyapz/shopline/ShippingFeeTest.java`](../../qa-shopline/src/test/java/ua/kpi/tzyapz/shopline/ShippingFeeTest.java), рядок 31: `"1500.00, 0.00"`)
 **Результат того ж тесту на v1:** Passed ([`surefire-v1/`](surefire-v1/), `ShippingFeeTest` — 11 з 11 зелені)
-**Severity:** Major · **Priority:** P2
-**Issue:** [#122](https://github.com/oleksandragorbonos-maker/tzap/issues/122), мітки `module`, `sprint:5`, `severity:major`, `priority:P2`, `status:new`
+**Severity:** Major · **Priority:** P3
+**Issue:** [#122](https://github.com/oleksandragorbonos-maker/tzap/issues/122), мітки `module`, `sprint:5`, `severity:major`, `priority:P3`, `status:new`
 **Дата і виконавиця:** 24.11.2026, Коротка К. (ІТ)
 
 ## Кроки відтворення
@@ -45,7 +45,7 @@
 ## Severity і Priority
 
 **Major:** функцію доставки не заблоковано і помилка лише на одній межі одного правила, але вона має прямий грошовий наслідок для покупця: замовлення рівно на 1500 грн отримує доставку за 120 грн замість безкоштовної.
-**P2:** дефект блокує проходження автотесту BL-60 (`ShippingFeeTest`) і є регресійним, тобто безпосередньо впливає на критерій К4 («0 відкритих регресійних дефектів», безумовний). Остаточне рішення про priority — за КТ.
+**P3** (рішення КТ, 25.11.2026): за таблицею 4.13 priority залежить від того, чи блокує дефект виконання кейсів; #122 нічого не блокує, тому P3 (аналогічно зниженню #65 з P2 до P3 у спринті 3). На безумовний критерій К4 («0 відкритих регресійних дефектів») це не впливає: К4 визначається самим фактом регресії, незалежно від priority.
 
 ## Середовище
 
