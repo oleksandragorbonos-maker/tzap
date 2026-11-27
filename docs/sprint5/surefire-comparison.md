@@ -38,9 +38,9 @@
 
 | Запуск | Вхід | v1 | v2 | Вимога |
 |---|---|---|---|---|
-| `ShippingFeeTest.givenSubtotalAfterDiscount_whenShippingFee_returnsFeeByThreshold[4]` | `subtotalAfterDiscount = 1500.00`, очікувано `0.00` | Passed | Failed: expected: <0.00> but was: <120.00> | BL-60 |
+| `ShippingFeeTest.givenSubtotalAfterDiscount_whenShippingFee_returnsFeeByThreshold[4]` | `subtotalAfterDiscount = 1500.00`, очікувано `0.00` | Passed | Failed: expected: <0.00> but was: <120.00> | BL-60, [#122](https://github.com/oleksandragorbonos-maker/tzap/issues/122) |
 
-Причина в коді v2: у `DiscountCalculator.shippingFee` умову порога змінено з `>= FREE_SHIPPING_FROM` на `> FREE_SHIPPING_FROM`. На v1 клас `ShippingFeeTest` був повністю зелений (11 з 11), дефекту BL-60 ніхто не заявляв. Звіт — SCRUM-173.
+Причина в коді v2: у `DiscountCalculator.shippingFee` умову порога змінено з `>= FREE_SHIPPING_FROM` на `> FREE_SHIPPING_FROM`. На v1 клас `ShippingFeeTest` був повністю зелений (11 з 11), дефекту BL-60 ніхто не заявляв. Звіт — [#122](https://github.com/oleksandragorbonos-maker/tzap/issues/122), [defects-regression.md](defects-regression.md) (SCRUM-173).
 
 ## Failed → Passed — виправлено (кандидати на Verified → Closed)
 
